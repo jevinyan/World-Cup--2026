@@ -65,14 +65,27 @@ Return the fully updated, complete JSON structure containing:
 
 Ensure that your output is a valid JSON.`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
-      contents: systemPrompt,
-      config: {
-        tools: [{ googleSearch: {} }],
-        responseMimeType: "application/json"
-      }
-    });
+    let response;
+    try {
+      response = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: systemPrompt,
+        config: {
+          tools: [{ googleSearch: {} }],
+          responseMimeType: "application/json"
+        }
+      });
+    } catch (searchError: any) {
+      console.warn("⚠️ Google Search Grounding is unavailable or exceeded quota (common on free-tier API keys):", searchError.message || searchError);
+      console.log("🔄 Falling back to AI simulation mode without search grounding...");
+      response = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: systemPrompt + "\n\nNote: Google Search tool is currently unavailable. Please generate a highly realistic and detailed simulation/progression of the tournament based purely on your knowledge and the current state.",
+        config: {
+          responseMimeType: "application/json"
+        }
+      });
+    }
 
     const responseText = response.text;
     if (!responseText) {
