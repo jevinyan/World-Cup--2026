@@ -1,130 +1,1253 @@
 {
   "matches": [
     {
-      "id": "MA-1", "stage": "Group", "group": "A", "homeTeamId": "USA", "awayTeamId": "NZL",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-11", "time": "17:00",
-      "stadium": "Azteca Stadium", "city": "Mexico City", "events": [
-        { "id": "ev-1", "minute": 14, "type": "goal", "teamId": "USA", "playerName": "Pulisic", "detail": "点球" },
-        { "id": "ev-2", "minute": 42, "type": "goal", "teamId": "USA", "playerName": "Balogun", "detail": "Weah 助攻" },
-        { "id": "ev-3", "minute": 78, "type": "goal", "teamId": "USA", "playerName": "Reyna" }
-      ], "stats": { "possession": [62, 38], "shots": [17, 5], "shotsOnTarget": [8, 1], "fouls": [8, 14], "corners": [7, 2], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "MA-1",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "USA",
+      "awayTeamId": "NZL",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "stadium": "Azteca Stadium",
+      "city": "Mexico City",
+      "events": [
+        {
+          "id": "ev-1",
+          "minute": 14,
+          "type": "goal",
+          "teamId": "USA",
+          "playerName": "Pulisic",
+          "detail": "点球"
+        },
+        {
+          "id": "ev-2",
+          "minute": 42,
+          "type": "goal",
+          "teamId": "USA",
+          "playerName": "Balogun",
+          "detail": "Weah 助攻"
+        },
+        {
+          "id": "ev-3",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "USA",
+          "playerName": "Reyna"
+        }
+      ],
+      "stats": {
+        "possession": [
+          62,
+          38
+        ],
+        "shots": [
+          17,
+          5
+        ],
+        "shotsOnTarget": [
+          8,
+          1
+        ],
+        "fouls": [
+          8,
+          14
+        ],
+        "corners": [
+          7,
+          2
+        ],
+        "yellowCards": [
+          1,
+          3
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MA-2", "stage": "Group", "group": "A", "homeTeamId": "COL", "awayTeamId": "MAR",
-      "homeScore": 1, "awayScore": 1, "status": "Completed", "date": "2026-06-12", "time": "14:00",
-      "stadium": "SoFi Stadium", "city": "Los Angeles", "events": [
-        { "id": "ev-4", "minute": 29, "type": "goal", "teamId": "MAR", "playerName": "En-Nesyri" },
-        { "id": "ev-5", "minute": 67, "type": "goal", "teamId": "COL", "playerName": "Luis Diaz" }
-      ], "stats": { "possession": [48, 52], "shots": [12, 11], "shotsOnTarget": [4, 4], "fouls": [15, 13], "corners": [4, 6], "yellowCards": [2, 2], "redCards": [0, 0] }
+      "id": "MA-2",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "COL",
+      "awayTeamId": "MAR",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-12",
+      "time": "14:00",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
+      "events": [
+        {
+          "id": "ev-4",
+          "minute": 29,
+          "type": "goal",
+          "teamId": "MAR",
+          "playerName": "En-Nesyri"
+        },
+        {
+          "id": "ev-5",
+          "minute": 67,
+          "type": "goal",
+          "teamId": "COL",
+          "playerName": "Luis Diaz"
+        }
+      ],
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          12,
+          11
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          15,
+          13
+        ],
+        "corners": [
+          4,
+          6
+        ],
+        "yellowCards": [
+          2,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MB-1", "stage": "Group", "group": "B", "homeTeamId": "CAN", "awayTeamId": "MLI",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-12", "time": "17:00",
-      "stadium": "BC Place", "city": "Vancouver", "events": [
-        { "id": "ev-18", "minute": 38, "type": "goal", "teamId": "CAN", "playerName": "David" },
-        { "id": "ev-19", "minute": 61, "type": "goal", "teamId": "MLI", "playerName": "Doucoure" },
-        { "id": "ev-20", "minute": 88, "type": "goal", "teamId": "CAN", "playerName": "Davies" }
-      ], "stats": { "possession": [55, 45], "shots": [12, 9], "shotsOnTarget": [6, 3], "fouls": [12, 14], "corners": [5, 4], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "MB-1",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "CAN",
+      "awayTeamId": "MLI",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-12",
+      "time": "17:00",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "events": [
+        {
+          "id": "ev-18",
+          "minute": 38,
+          "type": "goal",
+          "teamId": "CAN",
+          "playerName": "David"
+        },
+        {
+          "id": "ev-19",
+          "minute": 61,
+          "type": "goal",
+          "teamId": "MLI",
+          "playerName": "Doucoure"
+        },
+        {
+          "id": "ev-20",
+          "minute": 88,
+          "type": "goal",
+          "teamId": "CAN",
+          "playerName": "Davies"
+        }
+      ],
+      "stats": {
+        "possession": [
+          55,
+          45
+        ],
+        "shots": [
+          12,
+          9
+        ],
+        "shotsOnTarget": [
+          6,
+          3
+        ],
+        "fouls": [
+          12,
+          14
+        ],
+        "corners": [
+          5,
+          4
+        ],
+        "yellowCards": [
+          1,
+          3
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MC-1", "stage": "Group", "group": "C", "homeTeamId": "MEX", "awayTeamId": "ECU",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-11", "time": "20:00",
-      "stadium": "Estadio BBVA", "city": "Monterrey", "events": [
-        { "id": "ev-37", "minute": 31, "type": "goal", "teamId": "MEX", "playerName": "Gimenez" },
-        { "id": "ev-38", "minute": 52, "type": "goal", "teamId": "ECU", "playerName": "Valencia" },
-        { "id": "ev-39", "minute": 84, "type": "goal", "teamId": "MEX", "playerName": "Chavez" }
-      ], "stats": { "possession": [54, 46], "shots": [14, 10], "shotsOnTarget": [5, 3], "fouls": [11, 14], "corners": [6, 4], "yellowCards": [2, 3], "redCards": [0, 0] }
+      "id": "MC-1",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "MEX",
+      "awayTeamId": "ECU",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-11",
+      "time": "20:00",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "events": [
+        {
+          "id": "ev-37",
+          "minute": 31,
+          "type": "goal",
+          "teamId": "MEX",
+          "playerName": "Gimenez"
+        },
+        {
+          "id": "ev-38",
+          "minute": 52,
+          "type": "goal",
+          "teamId": "ECU",
+          "playerName": "Valencia"
+        },
+        {
+          "id": "ev-39",
+          "minute": 84,
+          "type": "goal",
+          "teamId": "MEX",
+          "playerName": "Chavez"
+        }
+      ],
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          14,
+          10
+        ],
+        "shotsOnTarget": [
+          5,
+          3
+        ],
+        "fouls": [
+          11,
+          14
+        ],
+        "corners": [
+          6,
+          4
+        ],
+        "yellowCards": [
+          2,
+          3
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MD-1", "stage": "Group", "group": "D", "homeTeamId": "ARG", "awayTeamId": "AUS",
-      "homeScore": 5, "awayScore": 1, "status": "Completed", "date": "2026-06-13", "time": "12:00",
-      "stadium": "Hard Rock Stadium", "city": "Miami", "events": [
-        { "id": "ev-53", "minute": 12, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "点球" },
-        { "id": "ev-54", "minute": 32, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "任意球" },
-        { "id": "ev-54b", "minute": 58, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Alvarez 助攻" },
-        { "id": "ev-55", "minute": 67, "type": "goal", "teamId": "ARG", "playerName": "Alvarez", "detail": "Messi 助攻" },
-        { "id": "ev-55b", "minute": 82, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Mac Allister 助攻" },
-        { "id": "ev-56", "minute": 89, "type": "goal", "teamId": "AUS", "playerName": "Duke" }
-      ], "stats": { "possession": [68, 32], "shots": [21, 5], "shotsOnTarget": [12, 2], "fouls": [8, 12], "corners": [9, 2], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "MD-1",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "ARG",
+      "awayTeamId": "AUS",
+      "homeScore": 5,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-13",
+      "time": "12:00",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "events": [
+        {
+          "id": "ev-53",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "ARG",
+          "playerName": "Messi",
+          "detail": "点球"
+        },
+        {
+          "id": "ev-54",
+          "minute": 32,
+          "type": "goal",
+          "teamId": "ARG",
+          "playerName": "Messi",
+          "detail": "任意球"
+        },
+        {
+          "id": "ev-54b",
+          "minute": 58,
+          "type": "goal",
+          "teamId": "ARG",
+          "playerName": "Messi",
+          "detail": "Alvarez 助攻"
+        },
+        {
+          "id": "ev-55",
+          "minute": 67,
+          "type": "goal",
+          "teamId": "ARG",
+          "playerName": "Alvarez",
+          "detail": "Messi 助攻"
+        },
+        {
+          "id": "ev-55b",
+          "minute": 82,
+          "type": "goal",
+          "teamId": "ARG",
+          "playerName": "Messi",
+          "detail": "Mac Allister 助攻"
+        },
+        {
+          "id": "ev-56",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "AUS",
+          "playerName": "Duke"
+        }
+      ],
+      "stats": {
+        "possession": [
+          68,
+          32
+        ],
+        "shots": [
+          21,
+          5
+        ],
+        "shotsOnTarget": [
+          12,
+          2
+        ],
+        "fouls": [
+          8,
+          12
+        ],
+        "corners": [
+          9,
+          2
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "ME-1", "stage": "Group", "group": "E", "homeTeamId": "BRA", "awayTeamId": "CMR",
-      "homeScore": 3, "awayScore": 1, "status": "Completed", "date": "2026-06-14", "time": "17:00",
-      "stadium": "Hard Rock Stadium", "city": "Miami", "events": [
-        { "id": "ev-71", "minute": 15, "type": "goal", "teamId": "BRA", "playerName": "Vinicius Jr" },
-        { "id": "ev-72", "minute": 42, "type": "goal", "teamId": "CMR", "playerName": "Aboubakar" },
-        { "id": "ev-73", "minute": 58, "type": "goal", "teamId": "BRA", "playerName": "Rodrygo" },
-        { "id": "ev-74", "minute": 83, "type": "goal", "teamId": "BRA", "playerName": "Endrick" }
-      ], "stats": { "possession": [61, 39], "shots": [19, 8], "shotsOnTarget": [9, 3], "fouls": [10, 15], "corners": [8, 2], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "ME-1",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "BRA",
+      "awayTeamId": "CMR",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "17:00",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "events": [
+        {
+          "id": "ev-71",
+          "minute": 15,
+          "type": "goal",
+          "teamId": "BRA",
+          "playerName": "Vinicius Jr"
+        },
+        {
+          "id": "ev-72",
+          "minute": 42,
+          "type": "goal",
+          "teamId": "CMR",
+          "playerName": "Aboubakar"
+        },
+        {
+          "id": "ev-73",
+          "minute": 58,
+          "type": "goal",
+          "teamId": "BRA",
+          "playerName": "Rodrygo"
+        },
+        {
+          "id": "ev-74",
+          "minute": 83,
+          "type": "goal",
+          "teamId": "BRA",
+          "playerName": "Endrick"
+        }
+      ],
+      "stats": {
+        "possession": [
+          61,
+          39
+        ],
+        "shots": [
+          19,
+          8
+        ],
+        "shotsOnTarget": [
+          9,
+          3
+        ],
+        "fouls": [
+          10,
+          15
+        ],
+        "corners": [
+          8,
+          2
+        ],
+        "yellowCards": [
+          1,
+          3
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MF-1", "stage": "Group", "group": "F", "homeTeamId": "FRA", "awayTeamId": "PER",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-14", "time": "20:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-89", "minute": 22, "type": "goal", "teamId": "FRA", "playerName": "Mbappe" },
-        { "id": "ev-90", "minute": 48, "type": "goal", "teamId": "FRA", "playerName": "Griezmann" },
-        { "id": "ev-91", "minute": 75, "type": "goal", "teamId": "FRA", "playerName": "Mbappe" }
-      ], "stats": { "possession": [60, 40], "shots": [16, 5], "shotsOnTarget": [8, 1], "fouls": [9, 12], "corners": [7, 2], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "MF-1",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "FRA",
+      "awayTeamId": "PER",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "20:00",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "events": [
+        {
+          "id": "ev-89",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "FRA",
+          "playerName": "Mbappe"
+        },
+        {
+          "id": "ev-90",
+          "minute": 48,
+          "type": "goal",
+          "teamId": "FRA",
+          "playerName": "Griezmann"
+        },
+        {
+          "id": "ev-91",
+          "minute": 75,
+          "type": "goal",
+          "teamId": "FRA",
+          "playerName": "Mbappe"
+        }
+      ],
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          16,
+          5
+        ],
+        "shotsOnTarget": [
+          8,
+          1
+        ],
+        "fouls": [
+          9,
+          12
+        ],
+        "corners": [
+          7,
+          2
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MG-1", "stage": "Group", "group": "G", "homeTeamId": "ENG", "awayTeamId": "SEN",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-15", "time": "20:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-105", "minute": 31, "type": "goal", "teamId": "ENG", "playerName": "Kane" },
-        { "id": "ev-106", "minute": 55, "type": "goal", "teamId": "SEN", "playerName": "Jackson" },
-        { "id": "ev-107", "minute": 78, "type": "goal", "teamId": "ENG", "playerName": "Saka" }
-      ], "stats": { "possession": [56, 44], "shots": [12, 10], "shotsOnTarget": [5, 4], "fouls": [11, 13], "corners": [6, 4], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "MG-1",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "ENG",
+      "awayTeamId": "SEN",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-15",
+      "time": "20:00",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "events": [
+        {
+          "id": "ev-105",
+          "minute": 31,
+          "type": "goal",
+          "teamId": "ENG",
+          "playerName": "Kane"
+        },
+        {
+          "id": "ev-106",
+          "minute": 55,
+          "type": "goal",
+          "teamId": "SEN",
+          "playerName": "Jackson"
+        },
+        {
+          "id": "ev-107",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "ENG",
+          "playerName": "Saka"
+        }
+      ],
+      "stats": {
+        "possession": [
+          56,
+          44
+        ],
+        "shots": [
+          12,
+          10
+        ],
+        "shotsOnTarget": [
+          5,
+          4
+        ],
+        "fouls": [
+          11,
+          13
+        ],
+        "corners": [
+          6,
+          4
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MH-1", "stage": "Group", "group": "H", "homeTeamId": "ESP", "awayTeamId": "ALG",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-16", "time": "12:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-122", "minute": 18, "type": "goal", "teamId": "ESP", "playerName": "Nico Williams" },
-        { "id": "ev-123", "minute": 45, "type": "goal", "teamId": "ESP", "playerName": "Morata" },
-        { "id": "ev-124", "minute": 73, "type": "goal", "teamId": "ESP", "playerName": "Yamal" }
-      ], "stats": { "possession": [68, 32], "shots": [18, 5], "shotsOnTarget": [8, 1], "fouls": [8, 12], "corners": [9, 2], "yellowCards": [0, 3], "redCards": [0, 0] }
+      "id": "MH-1",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "ESP",
+      "awayTeamId": "ALG",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-16",
+      "time": "12:00",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "events": [
+        {
+          "id": "ev-122",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "ESP",
+          "playerName": "Nico Williams"
+        },
+        {
+          "id": "ev-123",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "ESP",
+          "playerName": "Morata"
+        },
+        {
+          "id": "ev-124",
+          "minute": 73,
+          "type": "goal",
+          "teamId": "ESP",
+          "playerName": "Yamal"
+        }
+      ],
+      "stats": {
+        "possession": [
+          68,
+          32
+        ],
+        "shots": [
+          18,
+          5
+        ],
+        "shotsOnTarget": [
+          8,
+          1
+        ],
+        "fouls": [
+          8,
+          12
+        ],
+        "corners": [
+          9,
+          2
+        ],
+        "yellowCards": [
+          0,
+          3
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MI-1", "stage": "Group", "group": "I", "homeTeamId": "ITA", "awayTeamId": "CHI",
-      "homeScore": 2, "awayScore": 0, "status": "Completed", "date": "2026-06-17", "time": "12:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-139", "minute": 28, "type": "goal", "teamId": "ITA", "playerName": "Retegui" },
-        { "id": "ev-140", "minute": 67, "type": "goal", "teamId": "ITA", "playerName": "Barella" }
-      ], "stats": { "possession": [54, 46], "shots": [12, 8], "shotsOnTarget": [5, 2], "fouls": [11, 13], "corners": [5, 4], "yellowCards": [2, 2], "redCards": [0, 0] }
+      "id": "MI-1",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "ITA",
+      "awayTeamId": "CHI",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "12:00",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "events": [
+        {
+          "id": "ev-139",
+          "minute": 28,
+          "type": "goal",
+          "teamId": "ITA",
+          "playerName": "Retegui"
+        },
+        {
+          "id": "ev-140",
+          "minute": 67,
+          "type": "goal",
+          "teamId": "ITA",
+          "playerName": "Barella"
+        }
+      ],
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          12,
+          8
+        ],
+        "shotsOnTarget": [
+          5,
+          2
+        ],
+        "fouls": [
+          11,
+          13
+        ],
+        "corners": [
+          5,
+          4
+        ],
+        "yellowCards": [
+          2,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MJ-1", "stage": "Group", "group": "J", "homeTeamId": "BEL", "awayTeamId": "TUN",
-      "homeScore": 3, "awayScore": 1, "status": "Completed", "date": "2026-06-18", "time": "12:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-147", "minute": 22, "type": "goal", "teamId": "BEL", "playerName": "Lukaku" },
-        { "id": "ev-148", "minute": 44, "type": "goal", "teamId": "BEL", "playerName": "Trossard" },
-        { "id": "ev-149", "minute": 61, "type": "goal", "teamId": "TUN", "playerName": "Msakni" },
-        { "id": "ev-150", "minute": 85, "type": "goal", "teamId": "BEL", "playerName": "Openda" }
-      ], "stats": { "possession": [61, 39], "shots": [17, 7], "shotsOnTarget": [8, 2], "fouls": [9, 13], "corners": [7, 3], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "MJ-1",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "BEL",
+      "awayTeamId": "TUN",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-18",
+      "time": "12:00",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "events": [
+        {
+          "id": "ev-147",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "BEL",
+          "playerName": "Lukaku"
+        },
+        {
+          "id": "ev-148",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "BEL",
+          "playerName": "Trossard"
+        },
+        {
+          "id": "ev-149",
+          "minute": 61,
+          "type": "goal",
+          "teamId": "TUN",
+          "playerName": "Msakni"
+        },
+        {
+          "id": "ev-150",
+          "minute": 85,
+          "type": "goal",
+          "teamId": "BEL",
+          "playerName": "Openda"
+        }
+      ],
+      "stats": {
+        "possession": [
+          61,
+          39
+        ],
+        "shots": [
+          17,
+          7
+        ],
+        "shotsOnTarget": [
+          8,
+          2
+        ],
+        "fouls": [
+          9,
+          13
+        ],
+        "corners": [
+          7,
+          3
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "MK-5", "stage": "Group", "group": "K", "homeTeamId": "RSA", "awayTeamId": "AUT",
-      "homeScore": 1, "awayScore": 1, "status": "Live", "minute": 65, "date": "2026-06-25", "time": "17:00",
-      "stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "events": [
-        { "id": "ev-167", "minute": 18, "type": "goal", "teamId": "AUT", "playerName": "Baumgartner" },
-        { "id": "ev-168", "minute": 41, "type": "goal", "teamId": "RSA", "playerName": "Mokoena" }
-      ], "stats": { "possession": [46, 54], "shots": [8, 12], "shotsOnTarget": [3, 5], "fouls": [10, 8], "corners": [3, 6], "yellowCards": [1, 0], "redCards": [0, 0] }
+      "id": "MK-5",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "RSA",
+      "awayTeamId": "AUT",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "17:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "events": [
+        {
+          "id": "ev-167",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "AUT",
+          "playerName": "Baumgartner"
+        },
+        {
+          "id": "ev-168",
+          "minute": 41,
+          "type": "goal",
+          "teamId": "RSA",
+          "playerName": "Mokoena"
+        },
+        {
+          "id": "ev-169",
+          "minute": 80,
+          "type": "goal",
+          "teamId": "AUT",
+          "playerName": "Weimann",
+          "detail": "Sabitzer 助攻"
+        },
+        {
+          "id": "ev-170",
+          "minute": 89,
+          "type": "yellow card",
+          "teamId": "RSA",
+          "playerName": "Zwane"
+        }
+      ],
+      "stats": {
+        "possession": [
+          45,
+          55
+        ],
+        "shots": [
+          10,
+          15
+        ],
+        "shotsOnTarget": [
+          4,
+          7
+        ],
+        "fouls": [
+          13,
+          11
+        ],
+        "corners": [
+          4,
+          8
+        ],
+        "yellowCards": [
+          2,
+          0
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
-      "id": "ML-5", "stage": "Group", "group": "L", "homeTeamId": "IRQ", "awayTeamId": "NOR",
-      "homeScore": 0, "awayScore": 2, "status": "Live", "minute": 65, "date": "2026-06-25", "time": "17:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-185", "minute": 14, "type": "goal", "teamId": "NOR", "playerName": "Haaland" },
-        { "id": "ev-186", "minute": 44, "type": "goal", "teamId": "NOR", "playerName": "Haaland" }
-      ], "stats": { "possession": [33, 67], "shots": [3, 16], "shotsOnTarget": [1, 8], "fouls": [11, 6], "corners": [2, 9], "yellowCards": [1, 0], "redCards": [0, 0] }
+      "id": "ML-5",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "IRQ",
+      "awayTeamId": "NOR",
+      "homeScore": 0,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "17:00",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "events": [
+        {
+          "id": "ev-185",
+          "minute": 14,
+          "type": "goal",
+          "teamId": "NOR",
+          "playerName": "Haaland"
+        },
+        {
+          "id": "ev-186",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "NOR",
+          "playerName": "Haaland"
+        },
+        {
+          "id": "ev-187",
+          "minute": 75,
+          "type": "goal",
+          "teamId": "NOR",
+          "playerName": "Haaland",
+          "detail": "Odegaard 助攻"
+        },
+        {
+          "id": "ev-188",
+          "minute": 85,
+          "type": "yellow card",
+          "teamId": "IRQ",
+          "playerName": "Ali"
+        }
+      ],
+      "stats": {
+        "possession": [
+          30,
+          70
+        ],
+        "shots": [
+          5,
+          20
+        ],
+        "shotsOnTarget": [
+          1,
+          10
+        ],
+        "fouls": [
+          14,
+          8
+        ],
+        "corners": [
+          2,
+          11
+        ],
+        "yellowCards": [
+          2,
+          0
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "MM-1",
+      "stage": "Group",
+      "group": "M",
+      "homeTeamId": "JPN",
+      "awayTeamId": "EGY",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "stadium": "AT&T Stadium",
+      "city": "Arlington",
+      "events": [
+        {
+          "id": "ev-190",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "JPN",
+          "playerName": "Minamino"
+        },
+        {
+          "id": "ev-191",
+          "minute": 55,
+          "type": "goal",
+          "teamId": "EGY",
+          "playerName": "Salah",
+          "detail": "点球"
+        },
+        {
+          "id": "ev-192",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "JPN",
+          "playerName": "Kubo",
+          "detail": "鎌田大地 助攻"
+        },
+        {
+          "id": "ev-193",
+          "minute": 60,
+          "type": "yellow card",
+          "teamId": "EGY",
+          "playerName": "Elneny"
+        }
+      ],
+      "stats": {
+        "possession": [
+          52,
+          48
+        ],
+        "shots": [
+          13,
+          11
+        ],
+        "shotsOnTarget": [
+          6,
+          4
+        ],
+        "fouls": [
+          10,
+          14
+        ],
+        "corners": [
+          6,
+          5
+        ],
+        "yellowCards": [
+          0,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "MN-1",
+      "stage": "Group",
+      "group": "N",
+      "homeTeamId": "GER",
+      "awayTeamId": "KOR",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
+      "events": [
+        {
+          "id": "ev-200",
+          "minute": 17,
+          "type": "goal",
+          "teamId": "GER",
+          "playerName": "Musiala"
+        },
+        {
+          "id": "ev-201",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "GER",
+          "playerName": "Havertz"
+        },
+        {
+          "id": "ev-202",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "GER",
+          "playerName": "Füllkrug",
+          "detail": "Sane 助攻"
+        },
+        {
+          "id": "ev-203",
+          "minute": 30,
+          "type": "yellow card",
+          "teamId": "KOR",
+          "playerName": "Son Heung-min"
+        }
+      ],
+      "stats": {
+        "possession": [
+          65,
+          35
+        ],
+        "shots": [
+          18,
+          6
+        ],
+        "shotsOnTarget": [
+          9,
+          2
+        ],
+        "fouls": [
+          8,
+          12
+        ],
+        "corners": [
+          8,
+          3
+        ],
+        "yellowCards": [
+          0,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "MA-3",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "NZL",
+      "awayTeamId": "MAR",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-26",
+      "time": "14:00",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
+      "events": [],
+      "stats": {}
+    },
+    {
+      "id": "MB-2",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "MLI",
+      "awayTeamId": "URU",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-26",
+      "time": "17:00",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "events": [],
+      "stats": {}
+    },
+    {
+      "id": "MC-2",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "ECU",
+      "awayTeamId": "PER",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-26",
+      "time": "20:00",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "events": [],
+      "stats": {}
     }
   ],
   "scorers": [
-    { "id": "p1", "name": "埃尔林·哈兰德", "teamId": "NOR", "teamName": "挪威", "flag": "🇳🇴", "goals": 5, "assists": 0, "penalties": 0, "matchesPlayed": 3 },
-    { "id": "p4", "name": "莱昂内尔·梅西", "teamId": "ARG", "teamName": "阿根廷", "flag": "🇦🇷", "goals": 5, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
-    { "id": "p2", "name": "基利安·姆巴佩", "teamId": "FRA", "teamName": "法国", "flag": "🇫🇷", "goals": 4, "assists": 1, "penalties": 0, "matchesPlayed": 3 },
-    { "id": "p3", "name": "克里斯蒂安·普利西奇", "teamId": "USA", "teamName": "美国", "flag": "🇺🇸", "goals": 3, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
-    { "id": "p5", "name": "达尔文·努涅斯", "teamId": "URU", "teamName": "乌拉圭", "flag": "🇺🇾", "goals": 3, "assists": 1, "penalties": 0, "matchesPlayed": 3 }
+    {
+      "id": "p1",
+      "name": "埃尔林·哈兰德",
+      "teamId": "NOR",
+      "teamName": "挪威",
+      "flag": "🇳🇴",
+      "goals": 6,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p4",
+      "name": "莱昂内尔·梅西",
+      "teamId": "ARG",
+      "teamName": "阿根廷",
+      "flag": "🇦🇷",
+      "goals": 5,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p2",
+      "name": "基利安·姆巴佩",
+      "teamId": "FRA",
+      "teamName": "法国",
+      "flag": "🇫🇷",
+      "goals": 4,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p3",
+      "name": "克里斯蒂安·普利西奇",
+      "teamId": "USA",
+      "teamName": "美国",
+      "flag": "🇺🇸",
+      "goals": 3,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p5",
+      "name": "达尔文·努涅斯",
+      "teamId": "URU",
+      "teamName": "乌拉圭",
+      "flag": "🇺🇾",
+      "goals": 3,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p6",
+      "name": "南野拓实",
+      "teamId": "JPN",
+      "teamName": "日本",
+      "flag": "🇯🇵",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p7",
+      "name": "穆罕默德·萨拉赫",
+      "teamId": "EGY",
+      "teamName": "埃及",
+      "flag": "🇪🇬",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 1,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p8",
+      "name": "久保建英",
+      "teamId": "JPN",
+      "teamName": "日本",
+      "flag": "🇯🇵",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p9",
+      "name": "贾马尔·穆西亚拉",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p10",
+      "name": "凯·哈弗茨",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p11",
+      "name": "尼克拉斯·菲尔克鲁格",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p12",
+      "name": "安德烈亚斯·魏曼",
+      "teamId": "AUT",
+      "teamName": "奥地利",
+      "flag": "🇦🇹",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    }
   ],
   "news": [
     {
@@ -144,6 +1267,24 @@
       "time": "15分钟前",
       "source": "路透体育",
       "tag": "爆料"
+    },
+    {
+      "id": "news-3",
+      "title": "哈兰德帽子戏法！挪威3-0完胜伊拉克，提前锁定小组头名晋级！",
+      "summary": "神锋哈兰德上演帽子戏法，带领挪威在L组末轮以3-0战胜伊拉克，完美收官小组赛，昂首挺进淘汰赛。",
+      "content": "在今天早些时候结束的世界杯小组赛L组末轮较量中，挪威队凭借当家射手埃尔林·哈兰德的帽子戏法，以3-0的比分干净利落地击败了伊拉克队。哈兰德分别在第14、第44和第75分钟破门，将自己的世界杯总进球数提升至6球，继续领跑射手榜。此役过后，挪威队以全胜战绩锁定小组第一，成为本届世界杯首批晋级32强的队伍之一。",
+      "time": "刚刚",
+      "source": "国际足联中文官网",
+      "tag": "战报"
+    },
+    {
+      "id": "news-4",
+      "title": "日本惊险取胜，德国大胜韩国，奥地利绝杀南非！",
+      "summary": "25日世界杯小组赛战况激烈，日本队2-1力克埃及，德国队3-0轻取韩国，奥地利则凭借魏曼的绝杀2-1险胜南非。",
+      "content": "在今日多场焦点战中，日本队与埃及队的M组对决尤为引人关注。南野拓实和久保建英的进球帮助日本队2-1战胜萨拉赫领衔的埃及队。N组比赛中，德国队展现强大实力，穆西亚拉、哈弗茨和菲尔克鲁格各下一城，以3-0完胜韩国队。而在K组的比赛里，奥地利队在与南非的胶着战中，由魏曼在第80分钟打入制胜球，以2-1的比分惊险获胜。明日，将有更多精彩小组赛上演。",
+      "time": "1分钟前",
+      "source": "新华体育",
+      "tag": "赛果"
     }
   ]
 }
