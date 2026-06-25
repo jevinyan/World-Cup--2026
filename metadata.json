@@ -1,0 +1,6 @@
+{
+  "name": "2026世界杯数据可视化系统",
+  "description": "基于 React + TypeScript 配合孟菲斯撞色风格 (Neo-brutalism) 开发的 2026 世界杯超级数据可视化系统，包含赛程赛况、12组积分榜、射手榜、淘汰赛晋级路线以及滚动新闻，支持手动刷新实时数据模拟与聚合数据官方 API 的无缝切换。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
