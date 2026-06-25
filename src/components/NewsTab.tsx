@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import { NewsItem } from '../types';
-import { Radio, Calendar, ChevronRight, User, Globe, MessageSquare } from 'lucide-react';
+import { Radio, Calendar, ChevronRight, User, Globe, MessageSquare, X } from 'lucide-react';
 
 interface NewsTabProps {
   news: NewsItem[];
@@ -13,6 +13,7 @@ interface NewsTabProps {
 
 export default function NewsTab({ news }: NewsTabProps) {
   const [selectedNewsId, setSelectedNewsId] = useState<string | null>(null);
+  const [modalNews, setModalNews] = useState<NewsItem | null>(null);
 
   const getTagColor = (tag: NewsItem['tag']) => {
     switch (tag) {
@@ -32,6 +33,11 @@ export default function NewsTab({ news }: NewsTabProps) {
   };
 
   const activeNews = news.find((n) => n.id === selectedNewsId) || news[0];
+
+  const openNewsModal = (item: NewsItem, e: MouseEvent) => {
+    e.stopPropagation();
+    setModalNews(item);
+  };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -76,9 +82,12 @@ export default function NewsTab({ news }: NewsTabProps) {
                     <Globe className="w-3 h-3 text-gray-300" />
                     {item.source}
                   </span>
-                  <span className="text-black flex items-center gap-0.5 hover:underline">
+                  <button 
+                    onClick={(e) => openNewsModal(item, e)}
+                    className="text-black font-black flex items-center gap-0.5 hover:underline bg-transparent border-none p-0 cursor-pointer"
+                  >
                     查看详情 <ChevronRight className="w-3 h-3" />
-                  </span>
+                  </button>
                 </div>
               </div>
             );
@@ -141,6 +150,77 @@ export default function NewsTab({ news }: NewsTabProps) {
           </div>
         )}
       </div>
+
+      {/* Modern Memphis Styled Article Modal */}
+      {modalNews && (
+        <div 
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+          onClick={() => setModalNews(null)}
+        >
+          <div 
+            className="bg-white border-[4px] border-black rounded-2xl p-6 shadow-[8px_8px_0px_0px_#000000] max-w-2xl w-full relative max-h-[85vh] overflow-y-auto flex flex-col gap-4 animate-in fade-in zoom-in duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setModalNews(null)}
+              className="absolute top-4 right-4 bg-[#FF517A] text-white p-2 rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
+              aria-label="关闭窗口"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Category / Time */}
+            <div className="flex items-center gap-3 mt-2">
+              <span className={`${getTagColor(modalNews.tag)} font-sans font-black text-xs px-3 py-1 rounded border-2 border-black uppercase tracking-widest`}>
+                {modalNews.tag}
+              </span>
+              <span className="text-gray-400 font-mono font-extrabold text-xs flex items-center gap-1">
+                <Calendar className="w-3.5 h-3.5" />
+                {modalNews.time}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-black font-black text-xl sm:text-2xl font-sans leading-tight pr-10">
+              {modalNews.title}
+            </h2>
+
+            {/* Author details */}
+            <div className="flex items-center gap-3 text-xs text-gray-500 font-bold border-y-2 border-black/10 py-2.5">
+              <span className="flex items-center gap-1">
+                <User className="w-4 h-4 text-gray-400" />
+                记者: 世界杯前方报道特派组
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1">
+                <Globe className="w-3.5 h-3.5 text-gray-400" />
+                来源: {modalNews.source}
+              </span>
+            </div>
+
+            {/* Summary Box */}
+            <div className="font-extrabold text-black bg-[#F5F3ED] p-4 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+              “ {modalNews.summary} ”
+            </div>
+
+            {/* Article Content */}
+            <div className="text-sm sm:text-base text-gray-700 font-medium font-sans leading-relaxed space-y-4 whitespace-pre-wrap pt-2">
+              {modalNews.content}
+            </div>
+
+            {/* Bottom stamp */}
+            <div className="border-t-2 border-dashed border-gray-200 pt-5 mt-4 text-center">
+              <span className="font-mono text-xs text-gray-400 font-extrabold uppercase tracking-widest block">
+                ⚽️ 2026 FIFA WORLD CUP OFFICIAL NEWS ⚽️
+              </span>
+              <span className="text-[10px] text-gray-400 block mt-1">
+                数据云端实时刷新 · 真实战况同步
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,23 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { RefreshCw, Radio, Server, Calendar, Trophy, AlertCircle } from 'lucide-react';
+import { RefreshCw, Radio, Server, Calendar, Trophy, AlertCircle, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
   liveMatchesCount: number;
   completedMatchesCount: number;
   simulationEvent?: string;
+  onScrape: () => void;
+  isScraping: boolean;
+  scrapeStatus: string;
 }
 
 export default function Header({
   liveMatchesCount,
   completedMatchesCount,
   simulationEvent,
+  onScrape,
+  isScraping,
+  scrapeStatus,
 }: HeaderProps) {
   return (
     <header className="w-full flex flex-col gap-4 mb-6">
       {/* Top Banner: Memphis style title and controls */}
-      <div className="w-full bg-[#FFE227] border-[4px] border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-transform hover:-translate-y-0.5">
+      <div className="w-full bg-[#FFE227] border-[4px] border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-transform hover:-translate-y-0.5">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
             <span className="bg-black text-[#FFE227] text-xs font-bold font-mono px-2.5 py-1 rounded-md border-2 border-black uppercase tracking-wider animate-bounce">
@@ -38,13 +44,11 @@ export default function Header({
           </p>
         </div>
 
-        {/* Auto Refresh Active Indicator (No user manual control needed!) */}
-        <div className="flex items-center gap-2.5 bg-[#6BCB77] text-black font-black px-4.5 py-2.5 rounded-xl border-[3px] border-black shadow-[4px_4px_0px_0px_#000000] mt-2 md:mt-0 select-none">
-          <span className="flex h-3 w-3 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
-          </span>
-          <span className="font-sans text-xs sm:text-sm font-black tracking-wide">Cloudflare CDN 智能自动刷新中</span>
+        {/* Control and Indicator Panel */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto mt-2 lg:mt-0">
+          <div className="flex items-center justify-center gap-2.5 bg-black text-[#FFE227] font-black px-5 py-3.5 rounded-xl border-[3px] border-black shadow-[4px_4px_0px_0px_#000000] select-none text-sm tracking-wide">
+            <span>创作者：jevinyan(豆哥）</span>
+          </div>
         </div>
       </div>
 

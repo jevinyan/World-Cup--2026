@@ -28,6 +28,8 @@ export default function App() {
   const [news, setNews] = useState<NewsItem[]>(INITIAL_NEWS);
 
   const [simulationEvent, setSimulationEvent] = useState<string>('');
+  const [isScraping, setIsScraping] = useState(false);
+  const [scrapeStatus, setScrapeStatus] = useState('');
 
   // Compute standings dynamically whenever matches list updates
   const standings = useMemo(() => {
@@ -47,6 +49,64 @@ export default function App() {
       return () => clearTimeout(timer);
     }
   }, [simulationEvent]);
+
+  // Invoke AI Web Crawler to scrape latest real-world 2026 World Cup data
+  const handleScrapeData = async () => {
+    setIsScraping(true);
+    setScrapeStatus('📡 正在建立网络爬虫通道...');
+    setSimulationEvent('📡 正在建立网络爬虫通道...');
+
+    const statuses = [
+      '🔍 正在通过 Google 搜索引擎检索 2026 世界杯最新战况...',
+      '🤖 正在解析网页，过滤、清洗多源赛事信息...',
+      '📈 正在统计 12 个小组的最新比分与排名积分变化...',
+      '⚽ 正在同步最新射手榜进球与助攻数据...',
+      '📰 正在提炼赛场大新闻并翻译成中文资讯...',
+      '💾 正在将最新的结构化数据同步写入云端存储...'
+    ];
+
+    let statusIndex = 0;
+    const interval = setInterval(() => {
+      if (statusIndex < statuses.length) {
+        setScrapeStatus(statuses[statusIndex]);
+        setSimulationEvent(statuses[statusIndex]);
+        statusIndex++;
+      }
+    }, 1500);
+
+    try {
+      const res = await fetch('/api/scrape-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      clearInterval(interval);
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || errorData.details || '服务器爬取失败');
+      }
+
+      const result = await res.json();
+      if (result.success && result.data) {
+        if (result.data.matches) setMatches(result.data.matches);
+        if (result.data.scorers) setScorers(result.data.scorers);
+        if (result.data.news) setNews(result.data.news);
+        setSimulationEvent('🎉 智能爬虫同步成功！已成功载入最新实时数据。');
+      } else {
+        throw new Error('未获取到有效的更新数据');
+      }
+    } catch (err: any) {
+      clearInterval(interval);
+      console.error(err);
+      setSimulationEvent(`❌ 爬虫同步失败: ${err.message || err}`);
+    } finally {
+      setIsScraping(false);
+      setScrapeStatus('');
+    }
+  };
 
   // Automatic Data Fetching via Cloudflare CDN Endpoint
   const handleAutoRefresh = async (silent = false) => {
@@ -102,6 +162,9 @@ export default function App() {
           liveMatchesCount={liveCount}
           completedMatchesCount={completedCount}
           simulationEvent={simulationEvent}
+          onScrape={handleScrapeData}
+          isScraping={isScraping}
+          scrapeStatus={scrapeStatus}
         />
 
         {/* Memphis styled interactive Tab switcher */}

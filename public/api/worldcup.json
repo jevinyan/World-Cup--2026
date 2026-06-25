@@ -37,11 +37,15 @@
     },
     {
       "id": "MD-1", "stage": "Group", "group": "D", "homeTeamId": "ARG", "awayTeamId": "AUS",
-      "homeScore": 2, "awayScore": 0, "status": "Completed", "date": "2026-06-13", "time": "12:00",
+      "homeScore": 5, "awayScore": 1, "status": "Completed", "date": "2026-06-13", "time": "12:00",
       "stadium": "Hard Rock Stadium", "city": "Miami", "events": [
+        { "id": "ev-53", "minute": 12, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "点球" },
         { "id": "ev-54", "minute": 32, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "任意球" },
-        { "id": "ev-55", "minute": 67, "type": "goal", "teamId": "ARG", "playerName": "Alvarez" }
-      ], "stats": { "possession": [64, 36], "shots": [15, 6], "shotsOnTarget": [7, 1], "fouls": [10, 14], "corners": [8, 3], "yellowCards": [1, 3], "redCards": [0, 0] }
+        { "id": "ev-54b", "minute": 58, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Alvarez 助攻" },
+        { "id": "ev-55", "minute": 67, "type": "goal", "teamId": "ARG", "playerName": "Alvarez", "detail": "Messi 助攻" },
+        { "id": "ev-55b", "minute": 82, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Mac Allister 助攻" },
+        { "id": "ev-56", "minute": 89, "type": "goal", "teamId": "AUS", "playerName": "Duke" }
+      ], "stats": { "possession": [68, 32], "shots": [21, 5], "shotsOnTarget": [12, 2], "fouls": [8, 12], "corners": [9, 2], "yellowCards": [1, 2], "redCards": [0, 0] }
     },
     {
       "id": "ME-1", "stage": "Group", "group": "E", "homeTeamId": "BRA", "awayTeamId": "CMR",
@@ -117,9 +121,9 @@
   ],
   "scorers": [
     { "id": "p1", "name": "埃尔林·哈兰德", "teamId": "NOR", "teamName": "挪威", "flag": "🇳🇴", "goals": 5, "assists": 0, "penalties": 0, "matchesPlayed": 3 },
+    { "id": "p4", "name": "莱昂内尔·梅西", "teamId": "ARG", "teamName": "阿根廷", "flag": "🇦🇷", "goals": 5, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
     { "id": "p2", "name": "基利安·姆巴佩", "teamId": "FRA", "teamName": "法国", "flag": "🇫🇷", "goals": 4, "assists": 1, "penalties": 0, "matchesPlayed": 3 },
     { "id": "p3", "name": "克里斯蒂安·普利西奇", "teamId": "USA", "teamName": "美国", "flag": "🇺🇸", "goals": 3, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
-    { "id": "p4", "name": "莱昂内尔·梅西", "teamId": "ARG", "teamName": "阿根廷", "flag": "🇦🇷", "goals": 3, "assists": 1, "penalties": 0, "matchesPlayed": 3 },
     { "id": "p5", "name": "达尔文·努涅斯", "teamId": "URU", "teamName": "乌拉圭", "flag": "🇺🇾", "goals": 3, "assists": 1, "penalties": 0, "matchesPlayed": 3 }
   ],
   "news": [
