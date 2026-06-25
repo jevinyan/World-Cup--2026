@@ -36,8 +36,12 @@ export function calculateStandings(matches: Match[], teams: Record<string, Team>
       return;
     }
 
-    const homeStanding = standings[match.group || ''][match.homeTeamId];
-    const awayStanding = standings[match.group || ''][match.awayTeamId];
+    const groupName = match.group || teams[match.homeTeamId]?.group || teams[match.awayTeamId]?.group || '';
+    const groupStandings = standings[groupName];
+    if (!groupStandings) return;
+
+    const homeStanding = groupStandings[match.homeTeamId];
+    const awayStanding = groupStandings[match.awayTeamId];
 
     if (!homeStanding || !awayStanding) return;
 
