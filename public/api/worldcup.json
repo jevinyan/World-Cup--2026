@@ -1072,15 +1072,66 @@
       "group": "A",
       "homeTeamId": "NZL",
       "awayTeamId": "MAR",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "Scheduled",
+      "homeScore": 0,
+      "awayScore": 2,
+      "status": "Completed",
       "date": "2026-06-26",
       "time": "14:00",
       "stadium": "SoFi Stadium",
       "city": "Los Angeles",
-      "events": [],
-      "stats": {}
+      "events": [
+        {
+          "id": "ev-204",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "MAR",
+          "playerName": "Ziyech"
+        },
+        {
+          "id": "ev-205",
+          "minute": 65,
+          "type": "goal",
+          "teamId": "MAR",
+          "playerName": "Hakimi"
+        },
+        {
+          "id": "ev-206",
+          "minute": 78,
+          "type": "yellow card",
+          "teamId": "NZL",
+          "playerName": "Boxall"
+        }
+      ],
+      "stats": {
+        "possession": [
+          35,
+          65
+        ],
+        "shots": [
+          6,
+          15
+        ],
+        "shotsOnTarget": [
+          2,
+          7
+        ],
+        "fouls": [
+          12,
+          9
+        ],
+        "corners": [
+          3,
+          8
+        ],
+        "yellowCards": [
+          1,
+          0
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "MB-2",
@@ -1088,15 +1139,66 @@
       "group": "B",
       "homeTeamId": "MLI",
       "awayTeamId": "URU",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "Scheduled",
+      "homeScore": 0,
+      "awayScore": 2,
+      "status": "Completed",
       "date": "2026-06-26",
       "time": "17:00",
       "stadium": "BC Place",
       "city": "Vancouver",
-      "events": [],
-      "stats": {}
+      "events": [
+        {
+          "id": "ev-207",
+          "minute": 34,
+          "type": "goal",
+          "teamId": "URU",
+          "playerName": "Nunez"
+        },
+        {
+          "id": "ev-208",
+          "minute": 71,
+          "type": "goal",
+          "teamId": "URU",
+          "playerName": "Valverde"
+        },
+        {
+          "id": "ev-209",
+          "minute": 50,
+          "type": "yellow card",
+          "teamId": "MLI",
+          "playerName": "Bissouma"
+        }
+      ],
+      "stats": {
+        "possession": [
+          40,
+          60
+        ],
+        "shots": [
+          8,
+          13
+        ],
+        "shotsOnTarget": [
+          3,
+          6
+        ],
+        "fouls": [
+          14,
+          10
+        ],
+        "corners": [
+          4,
+          6
+        ],
+        "yellowCards": [
+          2,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "MC-2",
@@ -1104,13 +1206,128 @@
       "group": "C",
       "homeTeamId": "ECU",
       "awayTeamId": "PER",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "Scheduled",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
       "date": "2026-06-26",
       "time": "20:00",
       "stadium": "Estadio BBVA",
       "city": "Monterrey",
+      "events": [
+        {
+          "id": "ev-210",
+          "minute": 19,
+          "type": "goal",
+          "teamId": "ECU",
+          "playerName": "Caicedo"
+        },
+        {
+          "id": "ev-211",
+          "minute": 58,
+          "type": "goal",
+          "teamId": "PER",
+          "playerName": "Lapadula"
+        },
+        {
+          "id": "ev-212",
+          "minute": 45,
+          "type": "yellow card",
+          "teamId": "PER",
+          "playerName": "Tapia"
+        }
+      ],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          9
+        ],
+        "shotsOnTarget": [
+          4,
+          3
+        ],
+        "fouls": [
+          13,
+          11
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "MA-4",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "USA",
+      "awayTeamId": "COL",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "14:00",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "events": [],
+      "stats": {}
+    },
+    {
+      "id": "MB-3",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "CAN",
+      "awayTeamId": "KSA",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "17:00",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "events": [],
+      "stats": {}
+    },
+    {
+      "id": "MD-2",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "ARG",
+      "awayTeamId": "POL",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "20:00",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "events": [],
+      "stats": {}
+    },
+    {
+      "id": "ME-2",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "BRA",
+      "awayTeamId": "SRB",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "12:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
       "events": [],
       "stats": {}
     }
@@ -1150,6 +1367,17 @@
       "matchesPlayed": 3
     },
     {
+      "id": "p5",
+      "name": "达尔文·努涅斯",
+      "teamId": "URU",
+      "teamName": "乌拉圭",
+      "flag": "🇺🇾",
+      "goals": 4,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 4
+    },
+    {
       "id": "p3",
       "name": "克里斯蒂安·普利西奇",
       "teamId": "USA",
@@ -1161,15 +1389,81 @@
       "matchesPlayed": 3
     },
     {
-      "id": "p5",
-      "name": "达尔文·努涅斯",
-      "teamId": "URU",
-      "teamName": "乌拉圭",
-      "flag": "🇺🇾",
-      "goals": 3,
-      "assists": 1,
+      "id": "p22",
+      "name": "鲍姆加特纳",
+      "teamId": "AUT",
+      "teamName": "奥地利",
+      "flag": "🇦🇹",
+      "goals": 1,
+      "assists": 0,
       "penalties": 0,
-      "matchesPlayed": 3
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p16",
+      "name": "莫伊塞斯·凯塞多",
+      "teamId": "ECU",
+      "teamName": "厄瓜多尔",
+      "flag": "🇪🇨",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
+      "id": "p11",
+      "name": "尼克拉斯·菲尔克鲁格",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p14",
+      "name": "阿什拉夫·哈基米",
+      "teamId": "MAR",
+      "teamName": "摩洛哥",
+      "flag": "🇲🇦",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
+      "id": "p10",
+      "name": "凯·哈弗茨",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p8",
+      "name": "久保建英",
+      "teamId": "JPN",
+      "teamName": "日本",
+      "flag": "🇯🇵",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p17",
+      "name": "詹卢卡·拉帕杜拉",
+      "teamId": "PER",
+      "teamName": "秘鲁",
+      "flag": "🇵🇪",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
     },
     {
       "id": "p6",
@@ -1183,22 +1477,11 @@
       "matchesPlayed": 1
     },
     {
-      "id": "p7",
-      "name": "穆罕默德·萨拉赫",
-      "teamId": "EGY",
-      "teamName": "埃及",
-      "flag": "🇪🇬",
-      "goals": 1,
-      "assists": 0,
-      "penalties": 1,
-      "matchesPlayed": 1
-    },
-    {
-      "id": "p8",
-      "name": "久保建英",
-      "teamId": "JPN",
-      "teamName": "日本",
-      "flag": "🇯🇵",
+      "id": "p21",
+      "name": "马科埃纳",
+      "teamId": "RSA",
+      "teamName": "南非",
+      "flag": "🇿🇦",
       "goals": 1,
       "assists": 0,
       "penalties": 0,
@@ -1216,22 +1499,22 @@
       "matchesPlayed": 1
     },
     {
-      "id": "p10",
-      "name": "凯·哈弗茨",
-      "teamId": "GER",
-      "teamName": "德国",
-      "flag": "🇩🇪",
+      "id": "p7",
+      "name": "穆罕默德·萨拉赫",
+      "teamId": "EGY",
+      "teamName": "埃及",
+      "flag": "🇪🇬",
       "goals": 1,
       "assists": 0,
-      "penalties": 0,
+      "penalties": 1,
       "matchesPlayed": 1
     },
     {
-      "id": "p11",
-      "name": "尼克拉斯·菲尔克鲁格",
-      "teamId": "GER",
-      "teamName": "德国",
-      "flag": "🇩🇪",
+      "id": "p15",
+      "name": "费德里科·巴尔韦德",
+      "teamId": "URU",
+      "teamName": "乌拉圭",
+      "flag": "🇺🇾",
       "goals": 1,
       "assists": 0,
       "penalties": 0,
@@ -1247,27 +1530,64 @@
       "assists": 0,
       "penalties": 0,
       "matchesPlayed": 1
+    },
+    {
+      "id": "p13",
+      "name": "齐耶赫",
+      "teamId": "MAR",
+      "teamName": "摩洛哥",
+      "flag": "🇲🇦",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
+      "id": "p19",
+      "name": "鎌田大地",
+      "teamId": "JPN",
+      "teamName": "日本",
+      "flag": "🇯🇵",
+      "goals": 0,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p18",
+      "name": "奥德加德",
+      "teamId": "NOR",
+      "teamName": "挪威",
+      "flag": "🇳🇴",
+      "goals": 0,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p23",
+      "name": "萨比策",
+      "teamId": "AUT",
+      "teamName": "奥地利",
+      "flag": "🇦🇹",
+      "goals": 0,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 1
+    },
+    {
+      "id": "p20",
+      "name": "萨内",
+      "teamId": "GER",
+      "teamName": "德国",
+      "flag": "🇩🇪",
+      "goals": 0,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 1
     }
   ],
   "news": [
-    {
-      "id": "news-1",
-      "title": "魔人降临！哈兰德梅开二度，挪威大胜率先晋级32强！",
-      "summary": "2026美加墨世界杯小组赛L组末轮，挪威凭借哈兰德的出色发挥锁定胜局，昂首挺进淘汰赛。",
-      "content": "在刚刚结束的世界杯小组赛L组末轮比赛中，挪威队以高效的进攻彻底压制了对手。锋线尖刀哈兰德再次展现恐怖的门前嗅觉，在上半场第14分钟和第44分钟各入一球，目前他以5粒进球强势领领先！",
-      "time": "5分钟前",
-      "source": "国际足联中文官网",
-      "tag": "战报"
-    },
-    {
-      "id": "news-2",
-      "title": "美加墨世界杯：东道主墨西哥战胜厄瓜多尔，出线形势大好！",
-      "summary": "希门尼斯与查维斯各建一功，墨西哥队两胜一平积7分稳坐小组第一。",
-      "content": "在阿克伦体育场，全场接近五万名球迷的欢呼声里，墨西哥队奉献了极具侵略性的整场压迫，最终战胜了老对手厄瓜多尔。",
-      "time": "15分钟前",
-      "source": "路透体育",
-      "tag": "爆料"
-    },
     {
       "id": "news-3",
       "title": "哈兰德帽子戏法！挪威3-0完胜伊拉克，提前锁定小组头名晋级！",
@@ -1285,6 +1605,24 @@
       "time": "1分钟前",
       "source": "新华体育",
       "tag": "赛果"
+    },
+    {
+      "id": "news-5",
+      "title": "世界杯战报：摩洛哥乌拉圭高歌猛进，厄瓜多尔秘鲁握手言和！",
+      "summary": "在最新结束的2026世界杯小组赛中，摩洛哥2-0轻取新西兰，乌拉圭2-0完胜马里。厄瓜多尔与秘鲁则1-1战平，各取一分。",
+      "content": "今日世界杯战火继续，在A组的一场较量中，非洲劲旅摩洛哥凭借齐耶赫和哈基米的进球，以2-0击败新西兰队，展现了强大的进攻实力，目前在小组中积分领先。B组焦点战，南美豪强乌拉圭不负众望，达尔文·努涅斯和巴尔韦德的进球帮助球队2-0战胜马里，为晋级奠定坚实基础。而在C组的比赛中，厄瓜多尔与秘鲁经过90分钟激战，最终以1-1握手言和，凯塞多为厄瓜多尔破门，拉帕杜拉为秘鲁扳平比分，两队出线前景仍充满悬念。",
+      "time": "刚刚",
+      "source": "FIFA官方报道",
+      "tag": "战报"
+    },
+    {
+      "id": "news-6",
+      "title": "明日看点：美洲双雄迎战强敌，阿根廷巴西将登场！",
+      "summary": "27日世界杯小组赛将迎来多场重磅对决，美国、加拿大、阿根廷和巴西将悉数亮相，冲击小组赛第二轮的胜利。",
+      "content": "2026年美加墨世界杯小组赛第二轮即将打响。明日（27日），东道主美国队将在蒙特雷迎战强敌哥伦比亚，这场A组的较量将直接影响两队的出线形势。在B组，加拿大队将在温哥华对阵沙特阿拉伯，力争小组赛连胜。同时，D组的卫冕冠军阿根廷将在迈阿密迎战波兰，梅西领衔的潘帕斯雄鹰能否继续高歌猛进值得期待。E组方面，五星巴西也将在亚特兰大与塞尔维亚展开激战，内马尔能否率队取胜成为球迷关注的焦点。敬请关注明天世界杯的精彩赛事！",
+      "time": "1小时前",
+      "source": "体育快讯",
+      "tag": "前瞻"
     }
   ]
 }
