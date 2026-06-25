@@ -1268,20 +1268,153 @@
       }
     },
     {
+      "id": "ME-2",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "BRA",
+      "awayTeamId": "SRB",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-27",
+      "time": "12:00",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "events": [
+        {
+          "id": "ev-213",
+          "minute": 33,
+          "type": "goal",
+          "teamId": "BRA",
+          "playerName": "Neymar"
+        },
+        {
+          "id": "ev-214",
+          "minute": 67,
+          "type": "yellow card",
+          "teamId": "SRB",
+          "playerName": "Milinkovic-Savic"
+        },
+        {
+          "id": "ev-215",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "BRA",
+          "playerName": "Richarlison",
+          "detail": "Vinicius Jr 助攻"
+        }
+      ],
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          16,
+          7
+        ],
+        "shotsOnTarget": [
+          7,
+          2
+        ],
+        "fouls": [
+          10,
+          14
+        ],
+        "corners": [
+          8,
+          3
+        ],
+        "yellowCards": [
+          1,
+          2
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
       "id": "MA-4",
       "stage": "Group",
       "group": "A",
       "homeTeamId": "USA",
       "awayTeamId": "COL",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "Scheduled",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
       "date": "2026-06-27",
       "time": "14:00",
       "stadium": "Estadio BBVA",
       "city": "Monterrey",
-      "events": [],
-      "stats": {}
+      "events": [
+        {
+          "id": "ev-216",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "USA",
+          "playerName": "Pulisic"
+        },
+        {
+          "id": "ev-217",
+          "minute": 45,
+          "type": "yellow card",
+          "teamId": "COL",
+          "playerName": "James Rodriguez"
+        },
+        {
+          "id": "ev-218",
+          "minute": 59,
+          "type": "goal",
+          "teamId": "COL",
+          "playerName": "Luis Diaz"
+        },
+        {
+          "id": "ev-219",
+          "minute": 77,
+          "type": "goal",
+          "teamId": "USA",
+          "playerName": "Weah"
+        },
+        {
+          "id": "ev-220",
+          "minute": 88,
+          "type": "yellow card",
+          "teamId": "USA",
+          "playerName": "McKennie"
+        }
+      ],
+      "stats": {
+        "possession": [
+          55,
+          45
+        ],
+        "shots": [
+          14,
+          11
+        ],
+        "shotsOnTarget": [
+          6,
+          4
+        ],
+        "fouls": [
+          12,
+          15
+        ],
+        "corners": [
+          7,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "MB-3",
@@ -1314,22 +1447,6 @@
       "city": "Miami",
       "events": [],
       "stats": {}
-    },
-    {
-      "id": "ME-2",
-      "stage": "Group",
-      "group": "E",
-      "homeTeamId": "BRA",
-      "awayTeamId": "SRB",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "Scheduled",
-      "date": "2026-06-27",
-      "time": "12:00",
-      "stadium": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
-      "events": [],
-      "stats": {}
     }
   ],
   "scorers": [
@@ -1356,6 +1473,17 @@
       "matchesPlayed": 3
     },
     {
+      "id": "p3",
+      "name": "克里斯蒂安·普利西奇",
+      "teamId": "USA",
+      "teamName": "美国",
+      "flag": "🇺🇸",
+      "goals": 4,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 4
+    },
+    {
       "id": "p2",
       "name": "基利安·姆巴佩",
       "teamId": "FRA",
@@ -1378,15 +1506,15 @@
       "matchesPlayed": 4
     },
     {
-      "id": "p3",
-      "name": "克里斯蒂安·普利西奇",
-      "teamId": "USA",
-      "teamName": "美国",
-      "flag": "🇺🇸",
-      "goals": 3,
-      "assists": 2,
-      "penalties": 1,
-      "matchesPlayed": 3
+      "id": "p16",
+      "name": "莫伊塞斯·凯塞多",
+      "teamId": "ECU",
+      "teamName": "厄瓜多尔",
+      "flag": "🇪🇨",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
     },
     {
       "id": "p22",
@@ -1398,17 +1526,6 @@
       "assists": 0,
       "penalties": 0,
       "matchesPlayed": 1
-    },
-    {
-      "id": "p16",
-      "name": "莫伊塞斯·凯塞多",
-      "teamId": "ECU",
-      "teamName": "厄瓜多尔",
-      "flag": "🇪🇨",
-      "goals": 1,
-      "assists": 0,
-      "penalties": 0,
-      "matchesPlayed": 2
     },
     {
       "id": "p11",
@@ -1543,6 +1660,50 @@
       "matchesPlayed": 2
     },
     {
+      "id": "p24",
+      "name": "蒂莫西·维阿",
+      "teamId": "USA",
+      "teamName": "美国",
+      "flag": "🇺🇸",
+      "goals": 1,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 4
+    },
+    {
+      "id": "p25",
+      "name": "内马尔",
+      "teamId": "BRA",
+      "teamName": "巴西",
+      "flag": "🇧🇷",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
+      "id": "p26",
+      "name": "理查利森",
+      "teamId": "BRA",
+      "teamName": "巴西",
+      "flag": "🇧🇷",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
+      "id": "p27",
+      "name": "路易斯·迪亚斯",
+      "teamId": "COL",
+      "teamName": "哥伦比亚",
+      "flag": "🇨🇴",
+      "goals": 2,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 2
+    },
+    {
       "id": "p19",
       "name": "鎌田大地",
       "teamId": "JPN",
@@ -1622,6 +1783,24 @@
       "content": "2026年美加墨世界杯小组赛第二轮即将打响。明日（27日），东道主美国队将在蒙特雷迎战强敌哥伦比亚，这场A组的较量将直接影响两队的出线形势。在B组，加拿大队将在温哥华对阵沙特阿拉伯，力争小组赛连胜。同时，D组的卫冕冠军阿根廷将在迈阿密迎战波兰，梅西领衔的潘帕斯雄鹰能否继续高歌猛进值得期待。E组方面，五星巴西也将在亚特兰大与塞尔维亚展开激战，内马尔能否率队取胜成为球迷关注的焦点。敬请关注明天世界杯的精彩赛事！",
       "time": "1小时前",
       "source": "体育快讯",
+      "tag": "前瞻"
+    },
+    {
+      "id": "news-7",
+      "title": "世界杯快讯：美国队主场逆转哥伦比亚，巴西轻松击败塞尔维亚！",
+      "summary": "在今天结束的2026世界杯小组赛中，美国队在主场2-1力克哥伦比亚，而巴西队则以2-0轻取塞尔维亚，两支美洲劲旅均取得宝贵胜利。",
+      "content": "蒙特雷传来捷报！在A组的激烈对决中，东道主美国队凭借普利西奇和维阿的进球，以2-1的比分逆转战胜哥伦比亚队。尽管路易斯·迪亚斯一度为哥伦比亚扳平比分，但维阿在下半场的制胜球确保了美国队的胜利。与此同时，在E组的比赛中，五星巴西队在亚特兰大展现出了强大的实力，内马尔和理查利森的进球帮助球队2-0完胜塞尔维亚，延续了小组赛的强势表现。这两场胜利对美国和巴西而言都至关重要，为他们的小组出线之路奠定了坚实基础。",
+      "time": "刚刚",
+      "source": "FIFA中文官方报道",
+      "tag": "战报"
+    },
+    {
+      "id": "news-8",
+      "title": "2026世界杯小组赛战火升级：阿根廷、加拿大即将登场！",
+      "summary": "随着多场比赛的结束，世界杯小组赛进入白热化阶段。今晚，卫冕冠军阿根廷将迎战波兰，加拿大也将对阵沙特阿拉伯，多场焦点战值得期待。",
+      "content": "在今日的比赛结束后，2026世界杯小组赛的局势愈发紧张刺激。今晚（27日晚），万众瞩目的D组对决将在迈阿密上演，莱昂内尔·梅西率领的阿根廷队将面对波兰队的挑战，他们能否继续高歌猛进，巩固小组头名位置，是球迷关注的焦点。此外，B组的加拿大队也将在温哥华主场迎战沙特阿拉伯，他们渴望在本土球迷的支持下取得连胜。各小组的出线形势将随着这些比赛的结果变得更加明朗，每一场比赛都可能决定球队的命运。",
+      "time": "30分钟前",
+      "source": "环球体育",
       "tag": "前瞻"
     }
   ]
