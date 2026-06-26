@@ -1,6 +1,9 @@
 import { NewsItem } from '../types';
 
 const RSS_FEEDS = [
+  // Google News 中文世界杯新闻（优先，内容最新最全）
+  { name: 'Google News 中文世界杯', url: 'https://news.google.com/rss/search?q=2026%E4%B8%96%E7%95%8C%E6%9D%AF%E8%B6%B3%E7%90%83&hl=zh-CN&gl=CN&ceid=CN:zh-Hans', source: 'Google News' },
+  { name: 'Google News 英文世界杯', url: 'https://news.google.com/rss/search?q=fifa%20world%20cup%202026&hl=en&gl=US&ceid=US:en', source: 'Google News' },
   // 中文新闻源
   { name: '网易新闻', url: 'https://news.163.com/rss/news.xml', source: '网易体育' },
   { name: '搜狐体育', url: 'http://rss.sohu.com/feed.jsp?col=89&spec=0', source: '搜狐体育' },
@@ -51,14 +54,166 @@ const stripHtml = (html: string): string => {
   return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
 };
 
-const fetchRSSFeed = async (feedUrl: string, sourceName: string, feedName: string): Promise<NewsItem[]> => {
-  for (const proxy of CORS_PROXIES) {
-    try {
-      const proxyUrl = proxy(feedUrl);
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 8000);
+const parseFeedItems = (xml: Document, feedName: string, sourceName: string): NewsItem[] => {
+  let items = xml.querySelectorAll('item');
+  if (items.length === 0) {
+    items = xml.querySelectorAll('entry');
+  }
+  if (items.length === 0) {
+    items = xml.querySelectorAll('news');
+  }
 
-      const response = await fetch(proxyUrl, { signal: controller.signal });
+  const newsList: NewsItem[] = [];
+  const nsResolver = (prefix: string) => {
+    const ns: Record<string, string> = {
+      'media': 'http://search.yahoo.com/mrss/',
+      'dc': 'http://purl.org/dc/elements/1.1/',
+      'atom': 'http://www.w3.org/2005/Atom',
+      'content': 'http://purl.org/rss/1.0/modules/content/',
+    };
+    return ns[prefix] || null;
+  };
+
+  items.forEach((item, index) => {
+    if (index >= 10) return;
+
+    const title = 
+      item.querySelector('title')?.textContent?.replace(/<!\[CDATA\[|\]\]>/g, '').trim() ||
+      '';
+
+    let link = '';
+    const linkEl = item.querySelector('link');
+    if (linkEl) {
+      link = linkEl.textContent || linkEl.getAttribute('href') || '';
+    }
+    if (!link) {
+      const altLinks = item.querySelectorAll('link');
+      altLinks.forEach(l => {
+        if (l.getAttribute('rel') === 'alternate' || !link) {
+          link = l.getAttribute('href') || '';
+        }
+      });
+    }
+
+    let description = '';
+    const descEl = item.querySelector('description');
+    if (descEl) description = descEl.textContent || '';
+    if (!description) {
+      const summaryEl = item.querySelector('summary');
+      if (summaryEl) description = summaryEl.textContent || '';
+    }
+    if (!description) {
+      const contentEl = item.querySelector('content');
+      if (contentEl) description = contentEl.textContent || '';
+    }
+
+    let pubDate = '';
+    const pubDateEl = item.querySelector('pubDate');
+    if (pubDateEl) pubDate = pubDateEl.textContent || '';
+    if (!pubDate) {
+      const publishedEl = item.querySelector('published');
+      if (publishedEl) pubDate = publishedEl.textContent || '';
+    }
+    if (!pubDate) {
+      const updatedEl = item.querySelector('updated');
+      if (updatedEl) pubDate = updatedEl.textContent || '';
+    }
+    if (!pubDate) {
+      const dcDateEl = item.querySelector('dc\\:date');
+      if (dcDateEl) pubDate = dcDateEl.textContent || '';
+    }
+
+    let guid = '';
+    const guidEl = item.querySelector('guid');
+    if (guidEl) guid = guidEl.textContent || '';
+    if (!guid) {
+      const idEl = item.querySelector('id');
+      if (idEl) guid = idEl.textContent || '';
+    }
+    if (!guid && link) {
+      guid = link.split('/').pop() || link;
+    }
+    if (!guid) {
+      guid = String(Date.now() + index);
+    }
+
+    let image = '';
+    const enclosure = item.querySelector('enclosure');
+    if (enclosure?.getAttribute('url') && enclosure.getAttribute('type')?.startsWith('image')) {
+      image = enclosure.getAttribute('url') || '';
+    }
+    if (!image) {
+      const mediaThumbnails = item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail');
+      if (mediaThumbnails.length > 0) {
+        image = mediaThumbnails[0].getAttribute('url') || '';
+      }
+    }
+    if (!image) {
+      const mediaContents = item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content');
+      for (let i = 0; i < mediaContents.length; i++) {
+        const type = mediaContents[i].getAttribute('type') || '';
+        if (type.startsWith('image')) {
+          image = mediaContents[i].getAttribute('url') || '';
+          break;
+        }
+      }
+    }
+    const imgMatch = description.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (imgMatch && !image) {
+      image = imgMatch[1];
+    }
+
+    const cleanSummary = stripHtml(description);
+    const id = `news-${feedName}-${guid}-${index}`.replace(/[^a-zA-Z0-9-]/g, '');
+
+    if (!title || title.length < 5) return;
+
+    const actualSource = sourceName === 'Google News' 
+      ? (extractSourceFromTitle(title) || sourceName)
+      : sourceName;
+
+    newsList.push({
+      id,
+      title: title.slice(0, 200),
+      summary: cleanSummary.slice(0, 150) || title.slice(0, 100),
+      content: cleanSummary.slice(0, 500) || title,
+      time: formatTimeAgo(pubDate),
+      source: actualSource,
+      tag: getNewsTags(title),
+      image: image.replace(/^http:/, 'https:'),
+    });
+  });
+
+  return newsList;
+};
+
+const extractSourceFromTitle = (title: string): string => {
+  const patterns = [
+    /[\-–—]\s*([^-–—]+?)\s*$/,
+    /\|\s*([^|]+?)\s*$/,
+    /\[([^\]]+)\]\s*$/,
+  ];
+  for (const pattern of patterns) {
+    const match = title.match(pattern);
+    if (match && match[1] && match[1].trim().length < 30) {
+      return match[1].trim();
+    }
+  }
+  return '';
+};
+
+const fetchRSSFeed = async (feedUrl: string, sourceName: string, feedName: string): Promise<NewsItem[]> => {
+  const isGoogleNews = feedUrl.includes('news.google.com');
+  const urlsToTry = isGoogleNews
+    ? [feedUrl, ...CORS_PROXIES.map(p => p(feedUrl))]
+    : CORS_PROXIES.map(p => p(feedUrl));
+
+  for (const url of urlsToTry) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+      const response = await fetch(url, { signal: controller.signal });
       clearTimeout(timeoutId);
 
       if (!response.ok) continue;
@@ -67,100 +222,20 @@ const fetchRSSFeed = async (feedUrl: string, sourceName: string, feedName: strin
       const parser = new DOMParser();
       const xml = parser.parseFromString(text, 'text/xml');
 
-      // 检查是否是有效的 RSS XML
       const parseError = xml.querySelector('parsererror');
       if (parseError) {
-        console.warn(`⚠️ ${feedName} RSS 格式无效，尝试下一个代理...`);
+        console.warn(`⚠️ ${feedName} RSS 格式无效，尝试下一个...`);
         continue;
       }
 
-      // 尝试多种选择器来兼容不同格式的 RSS
-      let items = xml.querySelectorAll('item');
-      if (items.length === 0) {
-        items = xml.querySelectorAll('entry');
-      }
-      if (items.length === 0) {
-        items = xml.querySelectorAll('news');
-      }
-
-      const newsList: NewsItem[] = [];
-
-      items.forEach((item, index) => {
-        if (index >= 8) return; // 限制每源最多 8 条
-
-        // 尝试多种选择器来获取标题
-        const title = 
-          item.querySelector('title')?.textContent?.replace(/<!\[CDATA\[|\]\]>/g, '').trim() ||
-          item.querySelector('description')?.textContent?.slice(0, 50) ||
-          '';
-
-        // 尝试获取链接
-        const link = 
-          item.querySelector('link')?.textContent ||
-          item.querySelector('link')?.getAttribute('href') ||
-          '';
-
-        // 尝试获取描述
-        const description = 
-          item.querySelector('description')?.textContent ||
-          item.querySelector('summary')?.textContent ||
-          item.querySelector('content')?.textContent ||
-          '';
-
-        // 尝试获取发布时间
-        const pubDate = 
-          item.querySelector('pubDate')?.textContent ||
-          item.querySelector('published')?.textContent ||
-          item.querySelector('dc\\:date')?.textContent ||
-          '';
-
-        // 尝试获取唯一标识
-        const guid = 
-          item.querySelector('guid')?.textContent ||
-          item.querySelector('id')?.textContent ||
-          link.split('/').pop() ||
-          String(Date.now() + index);
-
-        // 尝试获取图片
-        let image = '';
-        const enclosure = item.querySelector('enclosure');
-        if (enclosure?.getAttribute('url') && enclosure.getAttribute('type')?.startsWith('image')) {
-          image = enclosure.getAttribute('url') || '';
-        }
-        const mediaContent = item.querySelector('media\\:content, media\\:thumbnail, content, thumbnail');
-        if (mediaContent?.getAttribute('url')) {
-          image = mediaContent.getAttribute('url') || '';
-        }
-        // 尝试从描述中提取图片
-        const imgMatch = description.match(/<img[^>]+src=["']([^"']+)["']/i);
-        if (imgMatch && !image) {
-          image = imgMatch[1];
-        }
-
-        const cleanSummary = stripHtml(description);
-        const id = `news-${feedName}-${guid}-${index}`.replace(/[^a-zA-Z0-9-]/g, '');
-
-        // 过滤掉没有标题的新闻
-        if (!title || title.length < 5) return;
-
-        newsList.push({
-          id,
-          title: title.slice(0, 200),
-          summary: cleanSummary.slice(0, 150) || title.slice(0, 100),
-          content: cleanSummary.slice(0, 500) || title,
-          time: formatTimeAgo(pubDate),
-          source: sourceName,
-          tag: getNewsTags(title),
-          image: image.replace(/^http:/, 'https:'),
-        });
-      });
+      const newsList = parseFeedItems(xml, feedName, sourceName);
 
       if (newsList.length > 0) {
         console.log(`✅ ${feedName}: ${newsList.length} 条新闻`);
         return newsList;
       }
     } catch (err: any) {
-      console.warn(`⚠️ ${feedName} 通过代理获取失败，尝试下一个...`);
+      console.warn(`⚠️ ${feedName} 获取失败，尝试下一个...`);
     }
   }
   return [];

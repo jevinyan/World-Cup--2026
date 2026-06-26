@@ -14,6 +14,7 @@ import NewsTab from './components/NewsTab';
 import { Match, PlayerScorer, NewsItem } from './types';
 import { TEAMS, INITIAL_MATCHES, INITIAL_SCORERS, INITIAL_NEWS } from './data/mockData';
 import { calculateStandings, simulateStep } from './utils/simulator';
+import { fetchNewsFromRSS } from './utils/rssNews';
 
 import { Trophy, CalendarDays, Award, Newspaper, Footprints, AlertCircle, Sparkles } from 'lucide-react';
 
@@ -192,16 +193,13 @@ export default function App() {
     }
   }, [scorers, news]);
 
-  // Fetch real-time news from RSS feeds (BBC Sport, ESPN, Goal.com)
+  // Fetch real-time news from RSS feeds (BBC Sport, ESPN, Goal.com) - pure frontend
   const fetchNews = useCallback(async () => {
     try {
-      const res = await fetch('/api/news');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.news && data.news.length > 0) {
-          setNews(data.news);
-          console.log(`📰 已获取 ${data.news.length} 条最新体育新闻`);
-        }
+      const news = await fetchNewsFromRSS();
+      if (news && news.length > 0) {
+        setNews(news);
+        console.log(`📰 已获取 ${news.length} 条最新体育新闻`);
       }
     } catch (err) {
       console.warn('新闻获取失败，使用本地模拟数据');
