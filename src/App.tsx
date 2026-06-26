@@ -169,7 +169,6 @@ export default function App() {
 
       if (updatedMatches) setMatches(updatedMatches);
       if (data.scorers) setScorers(data.scorers);
-      if (data.news) setNews(data.news);
       // Mark that we have real data from the backend — suppress local simulation
       setHasRealData(true);
 
@@ -193,6 +192,22 @@ export default function App() {
     }
   }, [scorers, news]);
 
+  // Fetch real-time news from RSS feeds (BBC Sport, ESPN, Goal.com)
+  const fetchNews = useCallback(async () => {
+    try {
+      const res = await fetch('/api/news');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.news && data.news.length > 0) {
+          setNews(data.news);
+          console.log(`📰 已获取 ${data.news.length} 条最新体育新闻`);
+        }
+      }
+    } catch (err) {
+      console.warn('新闻获取失败，使用本地模拟数据');
+    }
+  }, []);
+
   // Background Auto-Refresh effect (loads on mount and polls every 6 seconds)
   const autoRefreshRef = useRef<number | null>(null);
   const didInitRef = useRef(false);
@@ -208,6 +223,9 @@ export default function App() {
     // Initial fetch (falls back to simulation if backend unreachable)
     handleAutoRefresh(true);
 
+    // Fetch real-time news from RSS feeds
+    fetchNews();
+
     autoRefreshRef.current = window.setInterval(() => {
       handleAutoRefresh(true);
     }, 6000);
@@ -218,7 +236,7 @@ export default function App() {
         autoRefreshRef.current = null;
       }
     };
-  }, [handleScrapeData, handleAutoRefresh]);
+  }, [handleScrapeData, handleAutoRefresh, fetchNews]);
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-black font-sans pb-16 selection:bg-[#FFE227] selection:text-black">

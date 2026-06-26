@@ -3,11 +3,15 @@ import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import dotenv from "dotenv";
+import Parser from "rss-parser";
 
 dotenv.config();
 
 const app = express();
 const PORT = 3000;
+const rssParser = new Parser({
+  headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" },
+});
 
 app.use(express.json({ limit: '10mb' }));
 
@@ -210,6 +214,114 @@ const convert26WcMatch = (match: any, teamsMap: Record<string, any>) => {
     }
   };
 };
+
+// ============================================
+// RSS News Feed Configuration (Football/Soccer)
+// - Multiple sources for redundancy
+// - Free, no API key required
+// ============================================
+const RSS_FEEDS = [
+  { name: "BBC Sport Football", url: "http://feeds.bbci.co.uk/sport/football/rss.xml", source: "BBC Sport" },
+  { name: "ESPN FC", url: "https://www.espn.com/espn/rss/soccer/news", source: "ESPN FC" },
+  { name: "Goal.com", url: "https://www.goal.com/en-us/rss", source: "Goal.com" },
+  { name: "Sky Sports", url: "https://www.skysports.com/rss/0,20514,11095,00.xml", source: "Sky Sports" },
+];
+
+const newsCache: { data: any[]; ts: number } = { data: [], ts: 0 };
+const NEWS_CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes cache
+
+const getNewsTags = (title: string): '战报' | '爆料' | '突发' | '伤停' | '分析' => {
+  const lowerTitle = title.toLowerCase();
+  if (lowerTitle.includes('goal') || lowerTitle.includes('score') || lowerTitle.includes('win') || lowerTitle.includes('beat')) return '战报';
+  if (lowerTitle.includes('transfer') || lowerTitle.includes('sign') || lowerTitle.includes('deal')) return '爆料';
+  if (lowerTitle.includes('breaking') || lowerTitle.includes('latest') || lowerTitle.includes('now')) return '突发';
+  if (lowerTitle.includes('injury') || lowerTitle.includes('injured') || lowerTitle.includes('suspended')) return '伤停';
+  if (lowerTitle.includes('analysis') || lowerTitle.includes('preview') || lowerTitle.includes('tactics')) return '分析';
+  return '分析';
+};
+
+const formatTimeAgo = (dateStr: string): string => {
+  try {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMins / 60);
+    const diffDays = Math.floor(diffHours / 24);
+    
+    if (diffMins < 1) return '刚刚';
+    if (diffMins < 60) return `${diffMins}分钟前`;
+    if (diffHours < 24) return `${diffHours}小时前`;
+    if (diffDays < 7) return `${diffDays}天前`;
+    return date.toLocaleDateString('zh-CN');
+  } catch {
+    return '未知时间';
+  }
+};
+
+const stripHtml = (html: string): string => {
+  return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+};
+
+const fetchNewsFromRSS = async (): Promise<any[]> => {
+  const now = Date.now();
+  if (newsCache.ts && now - newsCache.ts < NEWS_CACHE_TTL_MS && newsCache.data.length > 0) {
+    return newsCache.data;
+  }
+
+  console.log("🔄 正在从 RSS 源获取最新体育新闻...");
+  const allNews: any[] = [];
+
+  for (const feed of RSS_FEEDS) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      
+      const parsed = await rssParser.parseURL(feed.url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (parsed.items && parsed.items.length > 0) {
+        const feedNews = parsed.items.slice(0, 5).map((item: any) => ({
+          id: `news-${feed.name}-${item.guid || item.link?.split('/').pop() || Date.now()}`,
+          title: item.title || '',
+          summary: stripHtml(item.summary || item.description || '').slice(0, 150),
+          content: stripHtml(item.content || item.description || '').slice(0, 300),
+          time: formatTimeAgo(item.pubDate || ''),
+          source: feed.source,
+          tag: getNewsTags(item.title || ''),
+          image: (item.enclosure?.url || item['media:content']?.[0]?.$?.url || '').replace(/^http:/, 'https:'),
+        }));
+        allNews.push(...feedNews);
+        console.log(`✅ ${feed.name}: ${feedNews.length} 条新闻`);
+      }
+    } catch (err: any) {
+      console.warn(`⚠️ ${feed.name} RSS 获取失败: ${err.message}`);
+    }
+  }
+
+  // Sort by time (newest first) and deduplicate
+  allNews.sort((a, b) => {
+    const timeMap: Record<string, number> = { '刚刚': 0 };
+    const aMins = parseInt(a.time) || 0;
+    const bMins = parseInt(b.time) || 0;
+    return bMins - aMins || Math.random();
+  });
+
+  newsCache.data = allNews.slice(0, 15);
+  newsCache.ts = now;
+  return newsCache.data;
+};
+
+// GET endpoint for real-time news from RSS feeds
+app.get("/api/news", async (req, res) => {
+  try {
+    const news = await fetchNewsFromRSS();
+    return res.json({ news, source: "RSS Feeds (BBC Sport, ESPN, Goal.com, Sky Sports)", count: news.length });
+  } catch (err: any) {
+    console.error("Error fetching news:", err);
+    return res.status(503).json({ news: [], error: "新闻获取失败", count: 0 });
+  }
+});
 
 // Helper to fetch from GitHub and return response
 async function fetchAndReturnGithubData(res: express.Response) {
