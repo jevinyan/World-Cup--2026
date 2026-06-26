@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
-import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -37,8 +36,9 @@ app.get("/api/worldcup.json", (req, res) => {
       const content = fs.readFileSync(dataPath, "utf-8");
       return res.json(JSON.parse(content));
     } else {
-      // Fallback fallback if file is somehow missing
-      return res.status(404).json({ error: "WorldCup data file not found" });
+      // Fallback if file is missing - fetch from GitHub
+      console.log("⚠️ Local data file missing, fetching from GitHub...");
+      return fetchAndReturnGithubData(res);
     }
   } catch (err: any) {
     console.error("Error reading worldcup.json:", err);
@@ -46,80 +46,134 @@ app.get("/api/worldcup.json", (req, res) => {
   }
 });
 
-// Helper to fetch external World Cup API with double insurance
-const fetchZafronixApi = async () => {
-  const url = "https://api.zafronix.com/fifa/worldcup/v1?api_key=zwc_free_2c0577ecf708416722f7b3cb";
+// ============================================
+// GitHub Open Source Data (26worldcup)
+// - Source: FIFA Official API, scraped every 15 minutes
+// - Free, no API key required, real match data
+// ============================================
+const GITHUB_26WC_BASE = "https://raw.githubusercontent.com/26worldcup/26worldcup.github.io/main/public/data";
+
+type ApiHealthResult = { success: boolean; data?: unknown; error?: string; ts: number };
+const apiCache: { lastFetch: ApiHealthResult } = { lastFetch: { success: false, ts: 0 } };
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes cache
+
+const fetch26WorldCupData = async (): Promise<ApiHealthResult> => {
+  const now = Date.now();
+  if (apiCache.lastFetch.ts && now - apiCache.lastFetch.ts < CACHE_TTL_MS) {
+    return apiCache.lastFetch;
+  }
+
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 6000); // 6s timeout
+  const timeoutId = setTimeout(() => controller.abort(), 8000);
 
   try {
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        "X-API-KEY": "zwc_free_2c0577ecf708416722f7b3cb",
-        "x-api-key": "zwc_free_2c0577ecf708416722f7b3cb",
-        "Authorization": "Bearer zwc_free_2c0577ecf708416722f7b3cb",
-        "Accept": "application/json"
-      },
-      signal: controller.signal
-    });
+    // Fetch matches + teams in parallel
+    const [matchesRes, teamsRes] = await Promise.all([
+      fetch(`${GITHUB_26WC_BASE}/matches.json`, { signal: controller.signal }),
+      fetch(`${GITHUB_26WC_BASE}/teams.json`, { signal: controller.signal }),
+    ]);
     clearTimeout(timeoutId);
 
-    if (response.ok) {
-      const data = await response.json();
-      console.log("✅ Zafronix API is working! Successfully fetched live data.");
-      return { success: true, data };
-    } else {
-      console.warn(`⚠️ Zafronix API responded with status ${response.status}`);
-      return { success: false, error: `HTTP status ${response.status}` };
+    if (!matchesRes.ok || !teamsRes.ok) {
+      const err = `HTTP ${matchesRes.status} / ${teamsRes.status}`;
+      console.warn(`⚠️ 26worldcup GitHub fetch failed: ${err}`);
+      apiCache.lastFetch = { success: false, error: err, ts: now };
+      return apiCache.lastFetch;
     }
+
+    const matchesData = await matchesRes.json();
+    const teamsData = await teamsRes.json();
+
+    console.log(`✅ 26worldcup GitHub data loaded: ${matchesData.matches?.length || 0} matches, ${Object.keys(teamsData.teams || {}).length} teams`);
+
+    const result = {
+      matches: matchesData.matches || [],
+      teams: teamsData.teams || {},
+    };
+
+    apiCache.lastFetch = { success: true, data: result, ts: now };
+    return apiCache.lastFetch;
   } catch (err: any) {
     clearTimeout(timeoutId);
-    console.warn("⚠️ Zafronix API test failed or timed out:", err.message || err);
-    return { success: false, error: err.message || err };
+    console.warn("⚠️ 26worldcup GitHub fetch failed:", err.message || err);
+    apiCache.lastFetch = { success: false, error: err.message || err, ts: now };
+    return apiCache.lastFetch;
   }
 };
 
-// Helper to fetch ESPN Scoreboard API for multi-channel live data
-const fetchEspnApi = async () => {
-  const url = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 6000); // 6s timeout
+// Convert 26worldcup match format to internal Match format
+const convert26WcMatch = (match: any, teamsMap: Record<string, any>) => {
+  const statusMap: Record<string, string> = {
+    "finished": "Completed",
+    "live": "Live",
+    "upcoming": "Scheduled",
+    "postponed": "Scheduled",
+    "suspended": "Live",
+  };
 
-  try {
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Accept": "application/json"
-      },
-      signal: controller.signal
-    });
-    clearTimeout(timeoutId);
+  const homeCode = match.home?.code || "";
+  const awayCode = match.away?.code || "";
+  const homeTeam = teamsMap[homeCode] || {};
+  const awayTeam = teamsMap[awayCode] || {};
 
-    if (response.ok) {
-      const data = await response.json();
-      console.log("✅ ESPN FIFA Scoreboard API is working! Successfully fetched live data.");
-      return { success: true, data };
-    } else {
-      console.warn(`⚠️ ESPN API responded with status ${response.status}`);
-      return { success: false, error: `HTTP status ${response.status}` };
-    }
-  } catch (err: any) {
-    clearTimeout(timeoutId);
-    console.warn("⚠️ ESPN API test failed or timed out:", err.message || err);
-    return { success: false, error: err.message || err };
+  // Parse date/time
+  const dateObj = new Date(match.date || "");
+  const dateStr = dateObj.toISOString().split("T")[0];
+  const timeStr = dateObj.toISOString().split("T")[1]?.slice(0, 5) || "12:00";
+
+  // Parse minute from "time" field like "67'" or "HT" or "FT"
+  let minute: number | null = null;
+  const timeStrRaw = match.time || "";
+  const minMatch = timeStrRaw.match(/(\d+)/);
+  if (minMatch) {
+    minute = parseInt(minMatch[1], 10);
   }
+
+  return {
+    id: `match-${match.id || match.n || Math.random()}`,
+    date: dateStr,
+    time: timeStr,
+    status: statusMap[match.status] || "Scheduled",
+    minute: match.status === "live" ? (minute || 0) : null,
+    homeTeamId: homeTeam.fifaId || homeCode,
+    homeTeam: homeTeam.name?.zh || homeTeam.name?.en || homeCode,
+    awayTeamId: awayTeam.fifaId || awayCode,
+    awayTeam: awayTeam.name?.zh || awayTeam.name?.en || awayCode,
+    homeScore: match.home?.score ?? 0,
+    awayScore: match.away?.score ?? 0,
+    homeFlag: homeTeam.flag || `https://api.fifa.com/api/v3/picture/flags-sq-3/${homeCode}`,
+    awayFlag: awayTeam.flag || `https://api.fifa.com/api/v3/picture/flags-sq-3/${awayCode}`,
+    group: match.group ? `${match.group}组` : (match.stage === "group" ? "小组赛" : "淘汰赛"),
+    venue: "",
+    events: [],
+    stats: {
+      possession: { home: 50, away: 50 },
+      shots: { home: 0, away: 0 },
+      shotsOnTarget: { home: 0, away: 0 },
+      corners: { home: 0, away: 0 },
+      fouls: { home: 0, away: 0 }
+    }
+  };
 };
 
-// POST endpoint to invoke the Gemini crawler/scraper
+// Helper to fetch from GitHub and return response
+async function fetchAndReturnGithubData(res: express.Response) {
+  const result = await fetch26WorldCupData();
+
+  if (result.success && result.data) {
+    const ghData = result.data as any;
+    const convertedMatches = ghData.matches.map((m: any) => convert26WcMatch(m, ghData.teams || {}));
+    return res.json({ matches: convertedMatches, scorers: [], news: [] });
+  }
+
+  return res.status(503).json({ 
+    error: "无法从 GitHub 获取数据，请稍后重试",
+    details: result.error 
+  });
+}
+
+// POST endpoint to sync data from GitHub
 app.post("/api/scrape-data", async (req, res) => {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return res.status(500).json({
-      error: "GEMINI_API_KEY is not configured in the server environment. Please configure it in Settings > Secrets."
-    });
-  }
-
   const { devPath, prodPath } = getPaths();
   let currentData = { matches: [], scorers: [], news: [] };
 
@@ -138,175 +192,51 @@ app.post("/api/scrape-data", async (req, res) => {
     console.warn("Failed to read current data, starting fresh.", e);
   }
 
-  // Triple insurance: verify external API resources can be accessed
-  console.log("🔍 Checking external Zafronix FIFA API for live data integration...");
-  const apiResult = await fetchZafronixApi();
+  // Fetch from GitHub (free, no API key)
+  console.log("🔍 正在从 26worldcup GitHub (FIFA 官方 API) 获取数据...");
+  const ghResult = await fetch26WorldCupData();
 
-  console.log("🔍 Checking external ESPN World Cup Scoreboard API for live data integration...");
-  const espnResult = await fetchEspnApi();
+  if (ghResult.success && ghResult.data) {
+    const ghData = ghResult.data as any;
+    if (ghData.matches && ghData.matches.length > 0) {
+      console.log(`✅ 成功获取 ${ghData.matches.length} 场比赛数据！`);
 
-  try {
-    const ai = new GoogleGenAI({
-      apiKey,
-      httpOptions: {
-        headers: {
-          'User-Agent': 'aistudio-build',
+      const convertedMatches = ghData.matches.map((m: any) => convert26WcMatch(m, ghData.teams || {}));
+
+      const mergedData = {
+        ...currentData,
+        matches: convertedMatches,
+      };
+
+      // Save merged data
+      try {
+        const devDir = path.dirname(devPath);
+        if (!fs.existsSync(devDir)) {
+          fs.mkdirSync(devDir, { recursive: true });
         }
+        fs.writeFileSync(devPath, JSON.stringify(mergedData, null, 2), "utf-8");
+        console.log("✅ 数据已保存至:", devPath);
+      } catch (writeErr) {
+        console.error("Error writing worldcup.json:", writeErr);
       }
-    });
 
-    const now = new Date();
-    const utcTimeStr = now.toUTCString();
-    const estTimeStr = now.toLocaleString("en-US", { timeZone: "America/New_York" });
-    const pdtTimeStr = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-
-    // Build the system prompt
-    let systemPrompt = `You are an intelligent real-time sports web crawler and scraper specializing in the 2026 FIFA World Cup. 
-The current real-world times are:
-- UTC (Coordinated Universal Time): ${utcTimeStr}
-- US Eastern Time (Match local times in Atlanta, Boston, etc.): ${estTimeStr}
-- US Pacific Time: ${pdtTimeStr}
-
-Please pay close attention to the match dates and times in the provided JSON:
-- Matches scheduled at "17:00" in Atlanta or Boston (Eastern Time) on June 25, 2026 are scheduled for 5:00 PM Eastern Time.
-- If the current Eastern Time is past 18:50 (6:50 PM), these matches have finished and MUST be updated from "Live" to "Completed"!
-- Generate final realistic scores (such as 2-1, 1-1, 3-2, etc.), move all goals, yellow/red cards into the "events" array, and fully populate the "stats" object.
-- Make sure to update the players' stats in the "scorers" array accordingly.
-- Keep the design consistent, highly realistic, and professional.
-
-Today's local date is June 25, 2026. 
-Your task is to search the web using your Search tool for any actual news, schedules, match scores, scorers, or updates of the 2026 FIFA World Cup (or qualifiers/teams if the main tournament hasn't started yet relative to the search index).
-If there is no direct real-time live data for this exact date on the web, you must intelligently simulate the next step of the tournament based on the current state provided to make the data feel alive, real-time, and dynamic.
-
-Current World Cup state:
-${JSON.stringify(currentData, null, 2)}
-`;
-
-    if (apiResult.success && apiResult.data) {
-      systemPrompt += `
-[CRITICAL - FIFA API DATA FOR MERGING]
-The external Zafronix API returned the following live match data:
-${JSON.stringify(apiResult.data, null, 2)}
-
-Instructions for Zafronix Data Merging:
-- Overwrite match scores, status, current match minutes, and scorer stats with those received from this API where match IDs or match pairings align.
-- If any match is marked as "Completed" in this API dataset, ensure its status is "Completed" in the final result.
-`;
-    }
-
-    if (espnResult.success && espnResult.data) {
-      systemPrompt += `
-[CRITICAL - ESPN SOCCER SCOREBOARD API DATA FOR MERGING]
-The external ESPN World Cup Scoreboard API returned the following live match and event data:
-${JSON.stringify(espnResult.data, null, 2)}
-
-Instructions for ESPN Data Merging:
-- Identify matching fixtures by checking the competitor teams' abbreviations or display names (e.g., USA, ENG, GER, ARG, BRA, FRA, JPN, etc.).
-- Update match status, live minutes/periods, and goals/scores based on this official real-time source. If ESPN indicates a match is completed or currently live, adjust our data state to match exactly.
-`;
-    }
-
-    if (!apiResult.success && !espnResult.success) {
-      systemPrompt += `
-[CRITICAL - API OFFLINE FALLBACK]
-Both external FIFA APIs (Zafronix and ESPN Scoreboard) are currently offline.
-Please fallback entirely to web searching and intelligent simulation to update and progress the tournament matches realistically.
-`;
-    }
-
-    systemPrompt += `
-Instructions:
-1. Update any match whose scheduled time has passed to "Completed", generate a realistic final score, update the 'events' list (with goals, yellow cards, etc. using players from the actual squads), and populate the 'stats' object.
-2. Advance/Schedule some other matches or mark next round matches as "Live" or "Scheduled".
-3. Update the 'scorers' array: increment players' goals, assists, and matchesPlayed based on the newly completed matches.
-4. Add 1-2 brand new, detailed, exciting, and highly professional news stories in Chinese to the 'news' array. news should have realistic details. Make sure news ids are unique (e.g., 'news-3', 'news-4', etc.).
-5. Make sure all IDs are unique and existing format is perfectly preserved.
-
-Return the fully updated, complete JSON structure containing:
-- matches: Array of matches
-- scorers: Array of scorers
-- news: Array of news
-
-Ensure that your output is a valid JSON.`;
-
-    let response;
-    try {
-      response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
-        contents: systemPrompt,
-        config: {
-          tools: [{ googleSearch: {} }],
-          responseMimeType: "application/json"
-        }
-      });
-    } catch (searchError: any) {
-      console.warn("⚠️ Google Search Grounding failed (likely due to free tier quota/billing limitations):", searchError.message || searchError);
-      console.log("🔄 Falling back to AI simulation mode without search grounding...");
-      response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
-        contents: systemPrompt + "\n\nNote: Google Search tool is currently unavailable. Please generate a highly realistic and detailed simulation/progression of the tournament based purely on your knowledge and the current state.",
-        config: {
-          responseMimeType: "application/json"
-        }
+      return res.json({
+        success: true,
+        message: "实时数据已从 FIFA 官方 API 同步成功！",
+        source: "26worldcup-github (FIFA Official API)",
+        matchesFound: ghData.matches.length,
+        data: mergedData
       });
     }
-
-    const responseText = response.text;
-    if (!responseText) {
-      throw new Error("Empty response received from Gemini API");
-    }
-
-    const scrapedData = JSON.parse(responseText);
-
-    // Validate the scraped data contains the main keys
-    if (!scrapedData.matches || !scrapedData.scorers || !scrapedData.news) {
-      throw new Error("Scraped data is missing matches, scorers, or news fields");
-    }
-
-    // Save the scraped data back to files
-    try {
-      // Ensure directories exist
-      const devDir = path.dirname(devPath);
-      if (!fs.existsSync(devDir)) {
-        fs.mkdirSync(devDir, { recursive: true });
-      }
-      fs.writeFileSync(devPath, JSON.stringify(scrapedData, null, 2), "utf-8");
-      console.log("Successfully wrote crawled data to dev path:", devPath);
-
-      // Write to prod path if it exists or if we are in production
-      const prodDir = path.dirname(prodPath);
-      if (fs.existsSync(prodDir) || process.env.NODE_ENV === "production") {
-        if (!fs.existsSync(prodDir)) {
-          fs.mkdirSync(prodDir, { recursive: true });
-        }
-        fs.writeFileSync(prodPath, JSON.stringify(scrapedData, null, 2), "utf-8");
-        console.log("Successfully wrote crawled data to prod path:", prodPath);
-      }
-    } catch (writeErr) {
-      console.error("Error writing updated worldcup.json:", writeErr);
-    }
-
-    return res.json({
-      success: true,
-      message: "Scraping and synchronization complete!",
-      apiStatus: apiResult.success ? "success" : "failed",
-      apiError: apiResult.success ? null : apiResult.error,
-      espnStatus: espnResult.success ? "success" : "failed",
-      espnError: espnResult.success ? null : espnResult.error,
-      data: scrapedData
-    });
-
-  } catch (err: any) {
-    console.error("Gemini Scraper Error:", err);
-    return res.status(500).json({
-      error: "AI scraping failed",
-      details: err.message || err,
-      apiStatus: apiResult.success ? "success" : "failed",
-      apiError: apiResult.success ? null : apiResult.error,
-      espnStatus: typeof espnResult !== 'undefined' && espnResult.success ? "success" : "failed",
-      espnError: typeof espnResult !== 'undefined' ? (espnResult.success ? null : espnResult.error) : "Not fetched"
-    });
   }
+
+  // GitHub fetch failed
+  return res.status(503).json({
+    success: false,
+    error: "无法从 GitHub 获取数据",
+    details: ghResult.error || "Unknown error",
+    hint: "请检查网络连接，或稍后重试。数据源来自 https://github.com/26worldcup/26worldcup.github.io"
+  });
 });
 
 // Start server setup
@@ -321,15 +251,21 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
-    // SPA Fallback
+    
+    // SPA fallback - serve index.html for all unmatched routes
     app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on port ${PORT}`);
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`📊 数据源: 26worldcup GitHub (FIFA 官方 API, 免费, 每15分钟更新)`);
+    console.log(`🔗 数据地址: ${GITHUB_26WC_BASE}`);
   });
 }
 
-startServer();
+startServer().catch((err) => {
+  console.error("Server startup failed:", err);
+  process.exit(1);
+});

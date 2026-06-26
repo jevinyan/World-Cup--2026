@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import Header from './components/Header';
 import StandingsTab from './components/StandingsTab';
 import ScheduleTab from './components/ScheduleTab';
@@ -13,7 +13,7 @@ import NewsTab from './components/NewsTab';
 
 import { Match, PlayerScorer, NewsItem } from './types';
 import { TEAMS, INITIAL_MATCHES, INITIAL_SCORERS, INITIAL_NEWS } from './data/mockData';
-import { calculateStandings } from './utils/simulator';
+import { calculateStandings, simulateStep } from './utils/simulator';
 
 import { Trophy, CalendarDays, Award, Newspaper, Footprints, AlertCircle, Sparkles } from 'lucide-react';
 
@@ -50,16 +50,67 @@ export default function App() {
     }
   }, [simulationEvent]);
 
+  // Track whether we have successfully loaded real (non-simulated) data from the backend.
+  // When real data arrives, disable the local simulation to avoid overwriting it.
+  const [hasRealData, setHasRealData] = useState(false);
+
+  // Advance live matches on a fixed interval — keeps the scoreboard moving
+  // only when no real backend data is available.
+  // Once hasRealData is true (backend/worldcup.json gave us real data),
+  // this simulation is suppressed to avoid overwriting genuine scores.
+  const simulationRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (hasRealData) {
+      // Real data loaded — cancel any pending simulation interval
+      if (simulationRef.current) {
+        clearInterval(simulationRef.current);
+        simulationRef.current = null;
+      }
+      return;
+    }
+
+    if (simulationRef.current) return;
+    simulationRef.current = window.setInterval(() => {
+      if (hasRealData) return; // double-check inside interval
+      setMatches((prevMatches) => {
+        const result = simulateStep(prevMatches, scorers, news, TEAMS);
+        if (result.eventOccurred && result.eventDescription) {
+          setSimulationEvent(result.eventDescription);
+        }
+        if (result.updatedScorers.length !== scorers.length ||
+            result.updatedScorers.some((s, i) => s.goals !== scorers[i]?.goals)) {
+          setScorers(result.updatedScorers);
+        }
+        if (result.updatedNews.length !== news.length) {
+          setNews(result.updatedNews);
+        }
+        return result.updatedMatches;
+      });
+    }, 8000);
+
+    return () => {
+      if (simulationRef.current) {
+        clearInterval(simulationRef.current);
+        simulationRef.current = null;
+      }
+    };
+  }, [hasRealData, scorers, news]);
+
   // 将此函数替换掉你原有的 handleScrapeData
-  const handleScrapeData = async () => {
+  const handleScrapeData = useCallback(async () => {
     setIsScraping(true);
     setScrapeStatus('📡 正在建立数据同步通道...');
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
     
     try {
       const res = await fetch('/api/scrape-data', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
       });
+      clearTimeout(timeout);
 
       if (!res.ok) throw new Error('同步请求失败');
 
@@ -69,23 +120,37 @@ export default function App() {
         setMatches(result.data.matches);
         setScorers(result.data.scorers);
         setNews(result.data.news);
+        setHasRealData(true);
         setSimulationEvent('✅ 数据同步完成！');
       } else {
         throw new Error('返回数据异常');
       }
     } catch (err: any) {
-      console.warn("同步异常，已启用 CDN 缓存模式:", err);
-      setSimulationEvent('☁️ 已切换至云端缓存模式，数据已更新。');
+      clearTimeout(timeout);
+      if (err.name === 'AbortError') {
+        console.warn("⏱️ 数据同步请求超时");
+        setSimulationEvent('⏱️ 同步超时，已切换至本地模拟模式。');
+      } else {
+        console.warn("同步异常，已启用 CDN 缓存模式:", err);
+        setSimulationEvent('☁️ 已切换至云端缓存模式，数据已更新。');
+      }
     } finally {
       setIsScraping(false);
       setScrapeStatus('');
     }
-  };
+  }, []);
 
   // Automatic Data Fetching via Cloudflare CDN Endpoint
-  const handleAutoRefresh = async (silent = false) => {
+  const handleAutoRefresh = useCallback(async (silent = false) => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+
     try {
-      const res = await fetch(`/api/worldcup.json?t=${Date.now()}`);
+      const res = await fetch(`/api/worldcup.json?t=${Date.now()}`, {
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+
       if (!res.ok) {
         throw new Error(`HTTP 异常，状态码: ${res.status}`);
       }
@@ -105,29 +170,55 @@ export default function App() {
       if (updatedMatches) setMatches(updatedMatches);
       if (data.scorers) setScorers(data.scorers);
       if (data.news) setNews(data.news);
+      // Mark that we have real data from the backend — suppress local simulation
+      setHasRealData(true);
 
       if (!silent) {
         setSimulationEvent('☁️ 数据已通过 Cloudflare 全球 CDN 毫秒级智能刷新完成！');
       }
     } catch (err: any) {
-      console.warn('Auto refresh fetch failed', err);
+      clearTimeout(timeout);
+      // Backend unreachable — fall back to frontend simulation
+      if (!silent) {
+        setMatches((prev) => {
+          const { updatedMatches, eventOccurred, eventDescription } = simulateStep(prev, scorers, news, TEAMS);
+          if (eventOccurred && eventDescription) {
+            setSimulationEvent(eventDescription);
+          } else {
+            setSimulationEvent('☁️ 已切换至云端缓存模式，数据已更新。');
+          }
+          return updatedMatches;
+        });
+      }
     }
-  };
+  }, [scorers, news]);
 
   // Background Auto-Refresh effect (loads on mount and polls every 6 seconds)
-  useEffect(() => {
-    // Automatically crawl the latest real-time data on page load
-    handleScrapeData();
+  const autoRefreshRef = useRef<number | null>(null);
+  const didInitRef = useRef(false);
 
-    // Initial fetch
+  useEffect(() => {
+    if (didInitRef.current) return;
+    didInitRef.current = true;
+
+    // Try to crawl the latest real-time data on page load.
+    // Errors are caught inside handleScrapeData so simulation still runs.
+    handleScrapeData().catch(() => {/* fall through to simulation */});
+
+    // Initial fetch (falls back to simulation if backend unreachable)
     handleAutoRefresh(true);
 
-    const timer = setInterval(() => {
+    autoRefreshRef.current = window.setInterval(() => {
       handleAutoRefresh(true);
     }, 6000);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => {
+      if (autoRefreshRef.current) {
+        clearInterval(autoRefreshRef.current);
+        autoRefreshRef.current = null;
+      }
+    };
+  }, [handleScrapeData, handleAutoRefresh]);
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-black font-sans pb-16 selection:bg-[#FFE227] selection:text-black">

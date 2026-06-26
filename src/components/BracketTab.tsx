@@ -117,7 +117,7 @@ export default function BracketTab() {
 
       {/* Graphical Desktop Connected Bracket Board */}
       <div className="hidden sm:grid grid-cols-4 gap-4 bg-[#F9F7F2] border-[3px] border-black p-6 rounded-2xl shadow-[5px_5px_0px_0px_#000000] relative overflow-x-auto min-w-[750px]">
-        {/* Column 1: Round of 16 */}
+        {/* Column 1: Round of 16 (top half) */}
         <div className="flex flex-col justify-around gap-4 z-10">
           <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono">
             1/8 决赛 (16强)
@@ -126,13 +126,12 @@ export default function BracketTab() {
             {r16Nodes.slice(0, 4).map((node) => (
               <div key={node.id} className="relative">
                 {renderMatchCard(node.id, node.label)}
-                {/* Connecting lines SVG simulation in pure tailwind is tricky, so we rely on crisp visual spacing and arrows, or simple SVG overlays if desired */}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Column 2: Quarterfinals */}
+        {/* Column 2: Quarterfinals (top half) + Round of 16 (bottom half) */}
         <div className="flex flex-col justify-around gap-4 z-10">
           <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono">
             1/4 决赛 (八强)
@@ -146,7 +145,7 @@ export default function BracketTab() {
           </div>
         </div>
 
-        {/* Column 3: Semifinals */}
+        {/* Column 3: Semifinals + Quarterfinals (bottom half) */}
         <div className="flex flex-col justify-around gap-4 z-10">
           <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono">
             半决赛 (四强)
@@ -160,7 +159,7 @@ export default function BracketTab() {
           </div>
         </div>
 
-        {/* Column 4: Final */}
+        {/* Column 4: Final + Trophy */}
         <div className="flex flex-col justify-between gap-4 z-10">
           <div>
             <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono mb-4">
@@ -174,9 +173,35 @@ export default function BracketTab() {
             <span className="font-black text-sm block mt-2 text-black">大力神杯</span>
             <span className="text-[10px] text-black/70 font-bold">美加墨传奇由谁书写</span>
           </div>
+        </div>
 
-          {/* Column 1 Right Side Overflow: Render the bottom 4 R16 nodes and QF nodes in a side-by-side or simple scrolling view if needed */}
-          {/* Note: In a 100% responsive grid, having a side drawer with details is much more readable than complicated overlapping arrows! */}
+        {/* Bottom section: R16 bottom half + QF bottom half */}
+        <div className="col-span-4 mt-6 pt-6 border-t-2 border-dashed border-black/20">
+          <div className="text-xs font-black text-center bg-[#FF517A] text-white py-1 rounded border-2 border-black font-mono mb-4 inline-block px-4">
+            下半区对阵 Bottom Bracket
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-4">
+              <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono">
+                1/8 决赛 (下半区 4 场)
+              </div>
+              <div className="flex flex-col gap-3">
+                {r16Nodes.slice(4, 8).map((node) => (
+                  <div key={node.id}>{renderMatchCard(node.id, node.label)}</div>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="text-xs font-black text-center bg-black text-white py-1 rounded border-2 border-black font-mono">
+                1/4 决赛 (下半区 2 场)
+              </div>
+              <div className="flex flex-col gap-10 justify-center py-6">
+                {qfNodes.slice(2, 4).map((node) => (
+                  <div key={node.id}>{renderMatchCard(node.id, node.label)}</div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
