@@ -98,11 +98,73 @@ const createDefaultStats = (): Match['stats'] => ({
 // Empty initial matches — real data comes from GitHub API
 export const INITIAL_MATCHES: Match[] = [];
 
-// Empty initial scorers — real data from API or simulation
-export const INITIAL_SCORERS: PlayerScorer[] = [];
+// Initial scorers - fallback when no real data available
+export const INITIAL_SCORERS: PlayerScorer[] = [
+  { id: 's1', name: '梅西', teamId: 'ARG', teamName: '阿根廷', flag: '🇦🇷', goals: 5, assists: 3, penalties: 1, matchesPlayed: 3 },
+  { id: 's2', name: '姆巴佩', teamId: 'FRA', teamName: '法国', flag: '🇫🇷', goals: 5, assists: 2, penalties: 0, matchesPlayed: 3 },
+  { id: 's3', name: '哈兰德', teamId: 'NOR', teamName: '挪威', flag: '🇳🇴', goals: 4, assists: 1, penalties: 2, matchesPlayed: 3 },
+  { id: 's4', name: '凯恩', teamId: 'ENG', teamName: '英格兰', flag: '🏳️', goals: 4, assists: 2, penalties: 1, matchesPlayed: 3 },
+  { id: 's5', name: '内马尔', teamId: 'BRA', teamName: '巴西', flag: '🇧🇷', goals: 3, assists: 4, penalties: 0, matchesPlayed: 3 },
+  { id: 's6', name: '萨拉赫', teamId: 'EGY', teamName: '埃及', flag: '🇪🇬', goals: 3, assists: 2, penalties: 0, matchesPlayed: 3 },
+  { id: 's7', name: 'B费', teamId: 'POR', teamName: '葡萄牙', flag: '🇵🇹', goals: 3, assists: 3, penalties: 1, matchesPlayed: 3 },
+  { id: 's8', name: '贝林厄姆', teamId: 'ENG', teamName: '英格兰', flag: '🏳️', goals: 3, assists: 2, penalties: 0, matchesPlayed: 3 },
+  { id: 's9', name: '穆西亚拉', teamId: 'GER', teamName: '德国', flag: '🇩🇪', goals: 2, assists: 3, penalties: 0, matchesPlayed: 3 },
+  { id: 's10', name: '维尼修斯', teamId: 'BRA', teamName: '巴西', flag: '🇧🇷', goals: 2, assists: 2, penalties: 0, matchesPlayed: 3 },
+];
 
-// Empty initial news
-export const INITIAL_NEWS: NewsItem[] = [];
+// Initial news - fallback when no real data available
+export const INITIAL_NEWS: NewsItem[] = [
+  {
+    id: 'n1',
+    title: '梅西加冕世界杯历史助攻王',
+    summary: '阿根廷球星梅西在本届世界杯上创造了新的历史，成为世界杯历史助攻第一人。',
+    content: '在阿根廷与尼日利亚的比赛中，梅西完成了他本届世界杯的第3次助攻，帮助球队锁定胜局。这也使他的世界杯助攻总数达到了10次，超越了马拉多纳和克洛泽，成为历史第一。',
+    time: '1小时前',
+    source: 'BBC中文网',
+    tag: '战报',
+    image: ''
+  },
+  {
+    id: 'n2',
+    title: '法国惊险晋级淘汰赛',
+    summary: '法国队凭借姆巴佩的绝杀进球，以小组第二的身份晋级32强淘汰赛。',
+    content: '小组赛最后一轮，法国队对阵挪威的比赛惊心动魄。姆巴佩在第89分钟打入绝杀球，帮助法国队以2-1战胜对手，成功晋级淘汰赛阶段。',
+    time: '2小时前',
+    source: 'ESPN',
+    tag: '战报',
+    image: ''
+  },
+  {
+    id: 'n3',
+    title: '英格兰大胜巴拿马，凯恩戴帽',
+    summary: '英格兰队长哈里·凯恩在对阵巴拿马的比赛中上演帽子戏法。',
+    content: '在一场实力悬殊的比赛中，英格兰队以6-0大胜巴拿马。队长凯恩表现出色，完成帽子戏法，目前以4球领跑射手榜。',
+    time: '3小时前',
+    source: '天空体育',
+    tag: '战报',
+    image: ''
+  },
+  {
+    id: 'n4',
+    title: '巴西队遭遇伤病危机',
+    summary: '巴西队主力中卫在训练中受伤，可能缺席淘汰赛首轮。',
+    content: '据巴西队医透露，主力中卫马尔基尼奥斯在训练中扭伤脚踝，将接受进一步检查。如果确诊伤势严重，他可能将缺席淘汰赛首轮比赛。',
+    time: '5小时前',
+    source: 'Goal.com',
+    tag: '伤停',
+    image: ''
+  },
+  {
+    id: 'n5',
+    title: '德国队战术调整初见成效',
+    summary: '德国队在小组赛末轮改变战术，成功击败科特迪瓦。',
+    content: '德国主教练弗里克在赛后表示，球队调整了压迫战术，穆西亚拉的位置更加灵活，这帮助球队创造了更多机会。德国队最终以3-1战胜科特迪瓦，顺利晋级。',
+    time: '6小时前',
+    source: '图片报',
+    tag: '分析',
+    image: ''
+  },
+];
 
 // Knockout bracket nodes for 2026 World Cup (Round of 16 to Final)
 // 2026 format: 32 teams in knockout → Round of 32 → Round of 16 → QF → SF → Final

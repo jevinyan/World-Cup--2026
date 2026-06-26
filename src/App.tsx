@@ -119,8 +119,17 @@ export default function App() {
       
       if (result.success && result.data) {
         setMatches(result.data.matches);
-        setScorers(result.data.scorers);
-        setNews(result.data.news);
+        
+        // Only update scorers if backend has real data (not empty/undefined)
+        if (result.data.scorers && result.data.scorers.length > 0) {
+          setScorers(result.data.scorers);
+        }
+        
+        // Only update news if backend has real data (not empty/undefined)
+        if (result.data.news && result.data.news.length > 0) {
+          setNews(result.data.news);
+        }
+        
         setHasRealData(true);
         setSimulationEvent('✅ 数据同步完成！');
       } else {
@@ -169,7 +178,17 @@ export default function App() {
       }
 
       if (updatedMatches) setMatches(updatedMatches);
-      if (data.scorers) setScorers(data.scorers);
+      
+      // Only update scorers if backend has real data (not empty/undefined)
+      if (data.scorers && data.scorers.length > 0) {
+        setScorers(data.scorers);
+      }
+      
+      // Only update news if backend has real data (not empty/undefined)
+      if (data.news && data.news.length > 0) {
+        setNews(data.news);
+      }
+      
       // Mark that we have real data from the backend — suppress local simulation
       setHasRealData(true);
 
