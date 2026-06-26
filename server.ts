@@ -97,7 +97,52 @@ app.get("/api/worldcup.json", async (req, res) => {
           }
         } catch (e) { /* ignore */ }
 
-        const convertedMatches = ghData.matches.map((m: any) => convert26WcMatch(m, ghData.teams || {}));
+        let convertedMatches = ghData.matches.map((m: any) => convert26WcMatch(m, ghData.teams || {}));
+        
+        // Enrich active/completed matches with ESPN stats & events
+        const activeMatches = convertedMatches.filter(m => m.status === 'Live' || m.status === 'Completed');
+        if (activeMatches.length > 0) {
+          console.log(`📊 从 ESPN 获取 ${activeMatches.length} 场比赛的技术统计和赛场动态...`);
+          const espnResult = await fetchEspnWorldCupData();
+          if (espnResult.success && espnResult.matches) {
+            // Build a map of ESPN matches by team codes
+            const espnMatchMap: Record<string, any> = {};
+            for (const em of espnResult.matches) {
+              const comp = em.competitions?.[0];
+              const h = comp?.competitors?.find((c: any) => c.homeAway === 'home')?.team?.abbreviation;
+              const a = comp?.competitors?.find((c: any) => c.homeAway === 'away')?.team?.abbreviation;
+              if (h && a) {
+                const key = `${h}-${a}`;
+                espnMatchMap[key] = em;
+                // Also store reverse
+                espnMatchMap[`${a}-${h}`] = em;
+              }
+            }
+            
+            let enrichedCount = 0;
+            convertedMatches = convertedMatches.map(match => {
+              if (match.status !== 'Live' && match.status !== 'Completed') return match;
+              
+              // Try to find matching ESPN match
+              const key = `${match.homeTeamId}-${match.awayTeamId}`;
+              const espnMatch = espnMatchMap[key];
+              if (espnMatch && espnMatch._summary) {
+                const espnConverted = convertEspnMatch(espnMatch, espnMatch._summary);
+                // Keep GitHub match info but replace stats and events
+                enrichedCount++;
+                return {
+                  ...match,
+                  stats: espnConverted.stats,
+                  events: espnConverted.events,
+                };
+              }
+              return match;
+            });
+            
+            console.log(`✅ 已为 ${enrichedCount} 场比赛补充 ESPN 技术统计和赛场动态`);
+          }
+        }
+
         const mergedData = { ...existingData, matches: convertedMatches, dataSource: "github-26worldcup" };
 
         try {
@@ -123,7 +168,7 @@ app.get("/api/worldcup.json", async (req, res) => {
         }
       } catch (e) { /* ignore */ }
 
-      const convertedMatches = espnResult.matches.map((m: any) => convertEspnMatch(m));
+      const convertedMatches = espnResult.matches.map((m: any) => convertEspnMatch(m, m._summary));
       const mergedData = { ...existingData, matches: convertedMatches, dataSource: "espn" };
 
       try {
@@ -159,13 +204,19 @@ app.get("/api/worldcup.json", async (req, res) => {
 // - Free, no API key required
 // - League ID: fifa.world
 // - Used as fallback when GitHub data is unavailable
+// - Provides real stats & play-by-play for live/completed matches
 // ============================================
 const ESPN_WORLD_CUP_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
 const ESPN_TEAMS_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/teams";
+const ESPN_SUMMARY_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 
 type EspnApiResult = { success: boolean; matches?: any[]; teams?: Record<string, any>; error?: string; ts: number };
 const espnCache: { lastFetch: EspnApiResult } = { lastFetch: { success: false, ts: 0 } };
 const ESPN_CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes cache
+
+// Detail cache for individual match summaries (stats, events)
+const espnDetailCache: Record<string, { data: any; ts: number }> = {};
+const ESPN_DETAIL_CACHE_TTL_MS = 2 * 60 * 1000; // 2 minutes cache for details
 
 const fetchEspnWorldCupData = async (): Promise<EspnApiResult> => {
   const now = Date.now();
@@ -174,16 +225,16 @@ const fetchEspnWorldCupData = async (): Promise<EspnApiResult> => {
   }
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 10000);
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
 
   try {
     const [scoreboardRes, teamsRes] = await Promise.all([
       fetch(ESPN_WORLD_CUP_URL, { signal: controller.signal }),
       fetch(ESPN_TEAMS_URL, { signal: controller.signal }),
     ]);
-    clearTimeout(timeoutId);
 
     if (!scoreboardRes.ok) {
+      clearTimeout(timeoutId);
       const err = `Scoreboard HTTP ${scoreboardRes.status}`;
       console.warn(`⚠️ ESPN scoreboard fetch failed: ${err}`);
       espnCache.lastFetch = { success: false, error: err, ts: now };
@@ -212,6 +263,41 @@ const fetchEspnWorldCupData = async (): Promise<EspnApiResult> => {
       }
     }
 
+    clearTimeout(timeoutId);
+
+    // Fetch match details for live/completed matches (for real stats & events)
+    const activeMatches = espnMatches.filter((e: any) => {
+      const state = e.status?.type?.state;
+      return state === 'in' || state === 'post';
+    });
+
+    if (activeMatches.length > 0) {
+      console.log(`📊 Fetching details for ${activeMatches.length} active matches...`);
+      
+      const detailPromises = activeMatches.map(async (event: any) => {
+        const summary = await fetchEspnMatchSummary(event.id);
+        return { eventId: event.id, summary };
+      });
+
+      const details = await Promise.all(detailPromises);
+      const detailMap: Record<string, any> = {};
+      for (const d of details) {
+        if (d.summary) {
+          detailMap[d.eventId] = d.summary;
+        }
+      }
+
+      // Attach summary data to events for convertEspnMatch to use
+      for (const event of espnMatches) {
+        if (detailMap[event.id]) {
+          (event as any)._summary = detailMap[event.id];
+        }
+      }
+
+      const withStats = Object.keys(detailMap).length;
+      console.log(`✅ Got details for ${withStats}/${activeMatches.length} matches`);
+    }
+
     console.log(`✅ ESPN data loaded: ${espnMatches.length} matches, ${Object.keys(teamsMap).length} teams`);
 
     espnCache.lastFetch = { success: true, matches: espnMatches, teams: teamsMap, ts: now };
@@ -224,7 +310,116 @@ const fetchEspnWorldCupData = async (): Promise<EspnApiResult> => {
   }
 };
 
-const convertEspnMatch = (event: any): Match => {
+// Fetch match summary (stats, events) from ESPN summary API
+const fetchEspnMatchSummary = async (eventId: string): Promise<any | null> => {
+  const now = Date.now();
+  const cached = espnDetailCache[eventId];
+  if (cached && now - cached.ts < ESPN_DETAIL_CACHE_TTL_MS) {
+    return cached.data;
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+  try {
+    const url = `${ESPN_SUMMARY_URL}?event=${eventId}`;
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const data = await res.json();
+    espnDetailCache[eventId] = { data, ts: now };
+    return data;
+  } catch (err: any) {
+    clearTimeout(timeoutId);
+    return null;
+  }
+};
+
+// Parse stats from ESPN summary boxscore - returns full stats for both teams
+const parseEspnStats = (summaryData: any): Match['stats'] | null => {
+  const boxscore = summaryData?.boxscore;
+  if (!boxscore?.teams || boxscore.teams.length < 2) return null;
+
+  const awayTeam = boxscore.teams[0];
+  const homeTeam = boxscore.teams[1];
+
+  const parseTeamStats = (teamData: any): Record<string, number> => {
+    const statsMap: Record<string, number> = {};
+    if (!teamData?.statistics) return statsMap;
+    for (const stat of teamData.statistics) {
+      const label = (stat.label || stat.name || '').toLowerCase();
+      const value = parseFloat(stat.displayValue || stat.value || '0');
+      if (!isNaN(value)) {
+        statsMap[label] = value;
+      }
+    }
+    return statsMap;
+  };
+
+  const awayStats = parseTeamStats(awayTeam);
+  const homeStats = parseTeamStats(homeTeam);
+
+  const possession = (awayStats['possession'] || 0) + (homeStats['possession'] || 0) > 0
+    ? [awayStats['possession'] || 0, homeStats['possession'] || 0] as [number, number]
+    : [50, 50] as [number, number];
+
+  return {
+    possession,
+    shots: [awayStats['shots'] || awayStats['total shots'] || 0, homeStats['shots'] || homeStats['total shots'] || 0] as [number, number],
+    shotsOnTarget: [awayStats['on goal'] || awayStats['shots on target'] || awayStats['on target'] || 0, homeStats['on goal'] || homeStats['shots on target'] || homeStats['on target'] || 0] as [number, number],
+    fouls: [awayStats['fouls'] || awayStats['fouls committed'] || 0, homeStats['fouls'] || homeStats['fouls committed'] || 0] as [number, number],
+    corners: [awayStats['corner kicks'] || awayStats['corners'] || awayStats['won corners'] || 0, homeStats['corner kicks'] || homeStats['corners'] || homeStats['won corners'] || 0] as [number, number],
+    yellowCards: [awayStats['yellow cards'] || 0, homeStats['yellow cards'] || 0] as [number, number],
+    redCards: [awayStats['red cards'] || 0, homeStats['red cards'] || 0] as [number, number],
+  };
+};
+
+// Parse events from ESPN play-by-play (if available)
+const parseEspnEvents = (summaryData: any, homeCode: string, awayCode: string): MatchEvent[] => {
+  const events: MatchEvent[] = [];
+  
+  // Check if there's play-by-play data
+  const plays = summaryData?.playByPlay?.plays || summaryData?.commentary?.items || [];
+  if (plays.length === 0) return events;
+
+  for (const play of plays) {
+    const type = play?.type?.text?.toLowerCase() || '';
+    const clock = play?.clock || play?.minute || '';
+    let minute = 0;
+    const minMatch = String(clock).match(/(\d+)/);
+    if (minMatch) minute = parseInt(minMatch[1], 10);
+
+    const teamId = play?.team?.abbreviation || '';
+    const athlete = play?.athlete?.displayName || play?.player?.displayName || '';
+    const text = play?.text || play?.description || '';
+
+    let eventType: MatchEvent['type'] | null = null;
+    if (type.includes('goal') || text.includes('goal')) eventType = 'goal';
+    else if (type.includes('yellow') || text.includes('yellow')) eventType = 'yellow_card';
+    else if (type.includes('red') || text.includes('red')) eventType = 'red_card';
+    else if (type.includes('sub') || text.includes('sub')) eventType = 'substitution';
+    else if (type.includes('injury') || text.includes('injury')) eventType = 'injury';
+
+    if (eventType && athlete) {
+      events.push({
+        id: `espn-ev-${play?.id || Math.random()}`,
+        minute: minute || 0,
+        type: eventType,
+        teamId: teamId || (play.homeAway === 'home' ? homeCode : awayCode),
+        playerName: athlete,
+        detail: text?.slice(0, 80) || undefined,
+      });
+    }
+  }
+
+  return events;
+};
+
+const convertEspnMatch = (event: any, summaryData?: any): Match => {
   const competition = event.competitions?.[0] || {};
   const competitors = competition.competitors || [];
   const homeTeam = competitors.find((c: any) => c.homeAway === 'home') || competitors[0];
@@ -266,6 +461,28 @@ const convertEspnMatch = (event: any): Match => {
     }
   }
 
+  // Get real stats from summary data if available
+  let stats: Match['stats'] = {
+    possession: [50, 50] as [number, number],
+    shots: [10, 10] as [number, number],
+    shotsOnTarget: [4, 4] as [number, number],
+    fouls: [12, 12] as [number, number],
+    corners: [5, 5] as [number, number],
+    yellowCards: [1, 1] as [number, number],
+    redCards: [0, 0] as [number, number],
+  };
+
+  let events: MatchEvent[] = [];
+
+  if (summaryData) {
+    const realStats = parseEspnStats(summaryData);
+    if (realStats) {
+      stats = realStats;
+    }
+
+    events = parseEspnEvents(summaryData, homeCode, awayCode);
+  }
+
   return {
     id: `espn-${event.id || Math.random()}`,
     stage,
@@ -280,16 +497,8 @@ const convertEspnMatch = (event: any): Match => {
     time: timeStr,
     stadium,
     city,
-    events: [],
-    stats: {
-      possession: [50, 50] as [number, number],
-      shots: [10, 10] as [number, number],
-      shotsOnTarget: [4, 4] as [number, number],
-      fouls: [12, 12] as [number, number],
-      corners: [5, 5] as [number, number],
-      yellowCards: [1, 1] as [number, number],
-      redCards: [0, 0] as [number, number],
-    }
+    events,
+    stats,
   };
 };
 
@@ -608,7 +817,7 @@ app.post("/api/scrape-data", async (req, res) => {
   if (espnResult.success && espnResult.matches && espnResult.matches.length > 0) {
     console.log(`✅ ESPN 备用源成功: ${espnResult.matches.length} 场比赛`);
 
-    const convertedMatches = espnResult.matches.map((m: any) => convertEspnMatch(m));
+    const convertedMatches = espnResult.matches.map((m: any) => convertEspnMatch(m, m._summary));
 
     const mergedData = {
       ...currentData,
