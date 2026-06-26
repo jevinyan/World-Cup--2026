@@ -1,130 +1,4222 @@
 {
   "matches": [
     {
-      "id": "MA-1", "stage": "Group", "group": "A", "homeTeamId": "USA", "awayTeamId": "NZL",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-11", "time": "17:00",
-      "stadium": "Azteca Stadium", "city": "Mexico City", "events": [
-        { "id": "ev-1", "minute": 14, "type": "goal", "teamId": "USA", "playerName": "Pulisic", "detail": "点球" },
-        { "id": "ev-2", "minute": 42, "type": "goal", "teamId": "USA", "playerName": "Balogun", "detail": "Weah 助攻" },
-        { "id": "ev-3", "minute": 78, "type": "goal", "teamId": "USA", "playerName": "Reyna" }
-      ], "stats": { "possession": [62, 38], "shots": [17, 5], "shotsOnTarget": [8, 1], "fouls": [8, 14], "corners": [7, 2], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "match-400021443",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43911",
+      "homeTeam": "墨西哥",
+      "awayTeamId": "43883",
+      "awayTeam": "南非",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MEX",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/RSA",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MA-2", "stage": "Group", "group": "A", "homeTeamId": "COL", "awayTeamId": "MAR",
-      "homeScore": 1, "awayScore": 1, "status": "Completed", "date": "2026-06-12", "time": "14:00",
-      "stadium": "SoFi Stadium", "city": "Los Angeles", "events": [
-        { "id": "ev-4", "minute": 29, "type": "goal", "teamId": "MAR", "playerName": "En-Nesyri" },
-        { "id": "ev-5", "minute": 67, "type": "goal", "teamId": "COL", "playerName": "Luis Diaz" }
-      ], "stats": { "possession": [48, 52], "shots": [12, 11], "shotsOnTarget": [4, 4], "fouls": [15, 13], "corners": [4, 6], "yellowCards": [2, 2], "redCards": [0, 0] }
+      "id": "match-400021441",
+      "date": "2026-06-12",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43822",
+      "homeTeam": "韩国",
+      "awayTeamId": "43995",
+      "awayTeam": "捷克",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KOR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CZE",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MB-1", "stage": "Group", "group": "B", "homeTeamId": "CAN", "awayTeamId": "MLI",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-12", "time": "17:00",
-      "stadium": "BC Place", "city": "Vancouver", "events": [
-        { "id": "ev-18", "minute": 38, "type": "goal", "teamId": "CAN", "playerName": "David" },
-        { "id": "ev-19", "minute": 61, "type": "goal", "teamId": "MLI", "playerName": "Doucoure" },
-        { "id": "ev-20", "minute": 88, "type": "goal", "teamId": "CAN", "playerName": "Davies" }
-      ], "stats": { "possession": [55, 45], "shots": [12, 9], "shotsOnTarget": [6, 3], "fouls": [12, 14], "corners": [5, 4], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "match-400021449",
+      "date": "2026-06-12",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43899",
+      "homeTeam": "加拿大",
+      "awayTeamId": "44037",
+      "awayTeam": "波斯尼亚和黑塞哥维那",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CAN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BIH",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MC-1", "stage": "Group", "group": "C", "homeTeamId": "MEX", "awayTeamId": "ECU",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-11", "time": "20:00",
-      "stadium": "Estadio BBVA", "city": "Monterrey", "events": [
-        { "id": "ev-37", "minute": 31, "type": "goal", "teamId": "MEX", "playerName": "Gimenez" },
-        { "id": "ev-38", "minute": 52, "type": "goal", "teamId": "ECU", "playerName": "Valencia" },
-        { "id": "ev-39", "minute": 84, "type": "goal", "teamId": "MEX", "playerName": "Chavez" }
-      ], "stats": { "possession": [54, 46], "shots": [14, 10], "shotsOnTarget": [5, 3], "fouls": [11, 14], "corners": [6, 4], "yellowCards": [2, 3], "redCards": [0, 0] }
+      "id": "match-400021458",
+      "date": "2026-06-13",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43921",
+      "homeTeam": "美国",
+      "awayTeamId": "43928",
+      "awayTeam": "巴拉圭",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/USA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAR",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MD-1", "stage": "Group", "group": "D", "homeTeamId": "ARG", "awayTeamId": "AUS",
-      "homeScore": 5, "awayScore": 1, "status": "Completed", "date": "2026-06-13", "time": "12:00",
-      "stadium": "Hard Rock Stadium", "city": "Miami", "events": [
-        { "id": "ev-53", "minute": 12, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "点球" },
-        { "id": "ev-54", "minute": 32, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "任意球" },
-        { "id": "ev-54b", "minute": 58, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Alvarez 助攻" },
-        { "id": "ev-55", "minute": 67, "type": "goal", "teamId": "ARG", "playerName": "Alvarez", "detail": "Messi 助攻" },
-        { "id": "ev-55b", "minute": 82, "type": "goal", "teamId": "ARG", "playerName": "Messi", "detail": "Mac Allister 助攻" },
-        { "id": "ev-56", "minute": 89, "type": "goal", "teamId": "AUS", "playerName": "Duke" }
-      ], "stats": { "possession": [68, 32], "shots": [21, 5], "shotsOnTarget": [12, 2], "fouls": [8, 12], "corners": [9, 2], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "match-400021453",
+      "date": "2026-06-14",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43908",
+      "homeTeam": "海地",
+      "awayTeamId": "43967",
+      "awayTeam": "苏格兰",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/HAI",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SCO",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "ME-1", "stage": "Group", "group": "E", "homeTeamId": "BRA", "awayTeamId": "CMR",
-      "homeScore": 3, "awayScore": 1, "status": "Completed", "date": "2026-06-14", "time": "17:00",
-      "stadium": "Hard Rock Stadium", "city": "Miami", "events": [
-        { "id": "ev-71", "minute": 15, "type": "goal", "teamId": "BRA", "playerName": "Vinicius Jr" },
-        { "id": "ev-72", "minute": 42, "type": "goal", "teamId": "CMR", "playerName": "Aboubakar" },
-        { "id": "ev-73", "minute": 58, "type": "goal", "teamId": "BRA", "playerName": "Rodrygo" },
-        { "id": "ev-74", "minute": 83, "type": "goal", "teamId": "BRA", "playerName": "Endrick" }
-      ], "stats": { "possession": [61, 39], "shots": [19, 8], "shotsOnTarget": [9, 3], "fouls": [10, 15], "corners": [8, 2], "yellowCards": [1, 3], "redCards": [0, 0] }
+      "id": "match-400021463",
+      "date": "2026-06-14",
+      "time": "04:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43976",
+      "homeTeam": "澳大利亚",
+      "awayTeamId": "43972",
+      "awayTeam": "土耳其",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUS",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUR",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MF-1", "stage": "Group", "group": "F", "homeTeamId": "FRA", "awayTeamId": "PER",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-14", "time": "20:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-89", "minute": 22, "type": "goal", "teamId": "FRA", "playerName": "Mbappe" },
-        { "id": "ev-90", "minute": 48, "type": "goal", "teamId": "FRA", "playerName": "Griezmann" },
-        { "id": "ev-91", "minute": 75, "type": "goal", "teamId": "FRA", "playerName": "Mbappe" }
-      ], "stats": { "possession": [60, 40], "shots": [16, 5], "shotsOnTarget": [8, 1], "fouls": [9, 12], "corners": [7, 2], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "match-400021456",
+      "date": "2026-06-13",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43924",
+      "homeTeam": "巴西",
+      "awayTeamId": "43872",
+      "awayTeam": "摩洛哥",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BRA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MAR",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MG-1", "stage": "Group", "group": "G", "homeTeamId": "ENG", "awayTeamId": "SEN",
-      "homeScore": 2, "awayScore": 1, "status": "Completed", "date": "2026-06-15", "time": "20:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-105", "minute": 31, "type": "goal", "teamId": "ENG", "playerName": "Kane" },
-        { "id": "ev-106", "minute": 55, "type": "goal", "teamId": "SEN", "playerName": "Jackson" },
-        { "id": "ev-107", "minute": 78, "type": "goal", "teamId": "ENG", "playerName": "Saka" }
-      ], "stats": { "possession": [56, 44], "shots": [12, 10], "shotsOnTarget": [5, 4], "fouls": [11, 13], "corners": [6, 4], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "match-400021447",
+      "date": "2026-06-13",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43834",
+      "homeTeam": "卡塔尔",
+      "awayTeamId": "43971",
+      "awayTeam": "瑞士",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/QAT",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SUI",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MH-1", "stage": "Group", "group": "H", "homeTeamId": "ESP", "awayTeamId": "ALG",
-      "homeScore": 3, "awayScore": 0, "status": "Completed", "date": "2026-06-16", "time": "12:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-122", "minute": 18, "type": "goal", "teamId": "ESP", "playerName": "Nico Williams" },
-        { "id": "ev-123", "minute": 45, "type": "goal", "teamId": "ESP", "playerName": "Morata" },
-        { "id": "ev-124", "minute": 73, "type": "goal", "teamId": "ESP", "playerName": "Yamal" }
-      ], "stats": { "possession": [68, 32], "shots": [18, 5], "shotsOnTarget": [8, 1], "fouls": [8, 12], "corners": [9, 2], "yellowCards": [0, 3], "redCards": [0, 0] }
+      "id": "match-400021467",
+      "date": "2026-06-14",
+      "time": "23:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43854",
+      "homeTeam": "科特迪瓦",
+      "awayTeamId": "43927",
+      "awayTeam": "厄瓜多尔",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CIV",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ECU",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MI-1", "stage": "Group", "group": "I", "homeTeamId": "ITA", "awayTeamId": "CHI",
-      "homeScore": 2, "awayScore": 0, "status": "Completed", "date": "2026-06-17", "time": "12:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-139", "minute": 28, "type": "goal", "teamId": "ITA", "playerName": "Retegui" },
-        { "id": "ev-140", "minute": 67, "type": "goal", "teamId": "ITA", "playerName": "Barella" }
-      ], "stats": { "possession": [54, 46], "shots": [12, 8], "shotsOnTarget": [5, 2], "fouls": [11, 13], "corners": [5, 4], "yellowCards": [2, 2], "redCards": [0, 0] }
+      "id": "match-400021464",
+      "date": "2026-06-14",
+      "time": "17:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43948",
+      "homeTeam": "德国",
+      "awayTeamId": "1895293",
+      "awayTeam": "库拉索",
+      "homeScore": 7,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GER",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CUW",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MJ-1", "stage": "Group", "group": "J", "homeTeamId": "BEL", "awayTeamId": "TUN",
-      "homeScore": 3, "awayScore": 1, "status": "Completed", "date": "2026-06-18", "time": "12:00",
-      "stadium": "Arrowhead Stadium", "city": "Kansas City", "events": [
-        { "id": "ev-147", "minute": 22, "type": "goal", "teamId": "BEL", "playerName": "Lukaku" },
-        { "id": "ev-148", "minute": 44, "type": "goal", "teamId": "BEL", "playerName": "Trossard" },
-        { "id": "ev-149", "minute": 61, "type": "goal", "teamId": "TUN", "playerName": "Msakni" },
-        { "id": "ev-150", "minute": 85, "type": "goal", "teamId": "BEL", "playerName": "Openda" }
-      ], "stats": { "possession": [61, 39], "shots": [17, 7], "shotsOnTarget": [8, 2], "fouls": [9, 13], "corners": [7, 3], "yellowCards": [1, 2], "redCards": [0, 0] }
+      "id": "match-400021470",
+      "date": "2026-06-14",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43960",
+      "homeTeam": "荷兰",
+      "awayTeamId": "43819",
+      "awayTeam": "日本",
+      "homeScore": 2,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NED",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JPN",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "MK-5", "stage": "Group", "group": "K", "homeTeamId": "RSA", "awayTeamId": "AUT",
-      "homeScore": 1, "awayScore": 1, "status": "Live", "minute": 65, "date": "2026-06-25", "time": "17:00",
-      "stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "events": [
-        { "id": "ev-167", "minute": 18, "type": "goal", "teamId": "AUT", "playerName": "Baumgartner" },
-        { "id": "ev-168", "minute": 41, "type": "goal", "teamId": "RSA", "playerName": "Mokoena" }
-      ], "stats": { "possession": [46, 54], "shots": [8, 12], "shotsOnTarget": [3, 5], "fouls": [10, 8], "corners": [3, 6], "yellowCards": [1, 0], "redCards": [0, 0] }
+      "id": "match-400021474",
+      "date": "2026-06-15",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43970",
+      "homeTeam": "瑞典",
+      "awayTeamId": "43888",
+      "awayTeam": "突尼斯",
+      "homeScore": 5,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SWE",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUN",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     },
     {
-      "id": "ML-5", "stage": "Group", "group": "L", "homeTeamId": "IRQ", "awayTeamId": "NOR",
-      "homeScore": 0, "awayScore": 2, "status": "Live", "minute": 65, "date": "2026-06-25", "time": "17:00",
-      "stadium": "Gillette Stadium", "city": "Boston", "events": [
-        { "id": "ev-185", "minute": 14, "type": "goal", "teamId": "NOR", "playerName": "Haaland" },
-        { "id": "ev-186", "minute": 44, "type": "goal", "teamId": "NOR", "playerName": "Haaland" }
-      ], "stats": { "possession": [33, 67], "shots": [3, 16], "shotsOnTarget": [1, 8], "fouls": [11, 6], "corners": [2, 9], "yellowCards": [1, 0], "redCards": [0, 0] }
+      "id": "match-400021486",
+      "date": "2026-06-15",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43835",
+      "homeTeam": "沙特阿拉伯",
+      "awayTeamId": "43930",
+      "awayTeam": "乌拉圭",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KSA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/URU",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021482",
+      "date": "2026-06-15",
+      "time": "16:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43969",
+      "homeTeam": "西班牙",
+      "awayTeamId": "43850",
+      "awayTeam": "佛得角",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ESP",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CPV",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021476",
+      "date": "2026-06-16",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43817",
+      "homeTeam": "伊朗",
+      "awayTeamId": "43978",
+      "awayTeam": "新西兰",
+      "homeScore": 2,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NZL",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021478",
+      "date": "2026-06-15",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43935",
+      "homeTeam": "比利时",
+      "awayTeamId": "43855",
+      "awayTeam": "埃及",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BEL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/EGY",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021490",
+      "date": "2026-06-16",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43946",
+      "homeTeam": "法国",
+      "awayTeamId": "43879",
+      "awayTeam": "塞内加尔",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/FRA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SEN",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021488",
+      "date": "2026-06-16",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43818",
+      "homeTeam": "伊拉克",
+      "awayTeamId": "43961",
+      "awayTeam": "挪威",
+      "homeScore": 1,
+      "awayScore": 4,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRQ",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NOR",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021496",
+      "date": "2026-06-17",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43922",
+      "homeTeam": "阿根廷",
+      "awayTeamId": "43843",
+      "awayTeam": "阿尔及利亚",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ARG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ALG",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021498",
+      "date": "2026-06-17",
+      "time": "04:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43934",
+      "homeTeam": "奥地利",
+      "awayTeamId": "43820",
+      "awayTeam": "约旦",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUT",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JOR",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021510",
+      "date": "2026-06-17",
+      "time": "23:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43860",
+      "homeTeam": "加纳",
+      "awayTeamId": "43914",
+      "awayTeam": "巴拿马",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GHA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAN",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021507",
+      "date": "2026-06-17",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43942",
+      "homeTeam": "英格兰",
+      "awayTeamId": "43938",
+      "awayTeam": "克罗地亚",
+      "homeScore": 4,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ENG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CRO",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021502",
+      "date": "2026-06-17",
+      "time": "17:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43963",
+      "homeTeam": "葡萄牙",
+      "awayTeamId": "20014",
+      "awayTeam": "刚果民主共和国",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/POR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COD",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021504",
+      "date": "2026-06-18",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "44005",
+      "homeTeam": "乌兹别克斯坦",
+      "awayTeamId": "43926",
+      "awayTeam": "哥伦比亚",
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/UZB",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COL",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021440",
+      "date": "2026-06-18",
+      "time": "16:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43995",
+      "homeTeam": "捷克",
+      "awayTeamId": "43883",
+      "awayTeam": "南非",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CZE",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/RSA",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021446",
+      "date": "2026-06-18",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43971",
+      "homeTeam": "瑞士",
+      "awayTeamId": "44037",
+      "awayTeam": "波斯尼亚和黑塞哥维那",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SUI",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BIH",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021450",
+      "date": "2026-06-18",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43899",
+      "homeTeam": "加拿大",
+      "awayTeamId": "43834",
+      "awayTeam": "卡塔尔",
+      "homeScore": 6,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CAN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/QAT",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021442",
+      "date": "2026-06-19",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43911",
+      "homeTeam": "墨西哥",
+      "awayTeamId": "43822",
+      "awayTeam": "韩国",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MEX",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KOR",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021457",
+      "date": "2026-06-20",
+      "time": "00:30",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43924",
+      "homeTeam": "巴西",
+      "awayTeamId": "43908",
+      "awayTeam": "海地",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BRA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/HAI",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021454",
+      "date": "2026-06-19",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43967",
+      "homeTeam": "苏格兰",
+      "awayTeamId": "43872",
+      "awayTeam": "摩洛哥",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SCO",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MAR",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021460",
+      "date": "2026-06-20",
+      "time": "03:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43972",
+      "homeTeam": "土耳其",
+      "awayTeamId": "43928",
+      "awayTeam": "巴拉圭",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAR",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021462",
+      "date": "2026-06-19",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43921",
+      "homeTeam": "美国",
+      "awayTeamId": "43976",
+      "awayTeam": "澳大利亚",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/USA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUS",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021469",
+      "date": "2026-06-20",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43948",
+      "homeTeam": "德国",
+      "awayTeamId": "43854",
+      "awayTeam": "科特迪瓦",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GER",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CIV",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021465",
+      "date": "2026-06-21",
+      "time": "00:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43927",
+      "homeTeam": "厄瓜多尔",
+      "awayTeamId": "1895293",
+      "awayTeam": "库拉索",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ECU",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CUW",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021472",
+      "date": "2026-06-20",
+      "time": "17:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43960",
+      "homeTeam": "荷兰",
+      "awayTeamId": "43970",
+      "awayTeam": "瑞典",
+      "homeScore": 5,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NED",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SWE",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021475",
+      "date": "2026-06-21",
+      "time": "04:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43888",
+      "homeTeam": "突尼斯",
+      "awayTeamId": "43819",
+      "awayTeam": "日本",
+      "homeScore": 0,
+      "awayScore": 4,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JPN",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021487",
+      "date": "2026-06-21",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43930",
+      "homeTeam": "乌拉圭",
+      "awayTeamId": "43850",
+      "awayTeam": "佛得角",
+      "homeScore": 2,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/URU",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CPV",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021483",
+      "date": "2026-06-21",
+      "time": "16:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43969",
+      "homeTeam": "西班牙",
+      "awayTeamId": "43835",
+      "awayTeam": "沙特阿拉伯",
+      "homeScore": 4,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ESP",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KSA",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021477",
+      "date": "2026-06-21",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43935",
+      "homeTeam": "比利时",
+      "awayTeamId": "43817",
+      "awayTeam": "伊朗",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BEL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRN",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021480",
+      "date": "2026-06-22",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43978",
+      "homeTeam": "新西兰",
+      "awayTeamId": "43855",
+      "awayTeam": "埃及",
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NZL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/EGY",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021491",
+      "date": "2026-06-23",
+      "time": "00:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43961",
+      "homeTeam": "挪威",
+      "awayTeamId": "43879",
+      "awayTeam": "塞内加尔",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NOR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SEN",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021492",
+      "date": "2026-06-22",
+      "time": "21:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43946",
+      "homeTeam": "法国",
+      "awayTeamId": "43818",
+      "awayTeam": "伊拉克",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/FRA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRQ",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021494",
+      "date": "2026-06-22",
+      "time": "17:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43922",
+      "homeTeam": "阿根廷",
+      "awayTeamId": "43934",
+      "awayTeam": "奥地利",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ARG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUT",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021499",
+      "date": "2026-06-23",
+      "time": "03:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43820",
+      "homeTeam": "约旦",
+      "awayTeamId": "43843",
+      "awayTeam": "阿尔及利亚",
+      "homeScore": 1,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JOR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ALG",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021506",
+      "date": "2026-06-23",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43942",
+      "homeTeam": "英格兰",
+      "awayTeamId": "43860",
+      "awayTeam": "加纳",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ENG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GHA",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021511",
+      "date": "2026-06-23",
+      "time": "23:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43914",
+      "homeTeam": "巴拿马",
+      "awayTeamId": "43938",
+      "awayTeam": "克罗地亚",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CRO",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021503",
+      "date": "2026-06-23",
+      "time": "17:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43963",
+      "homeTeam": "葡萄牙",
+      "awayTeamId": "44005",
+      "awayTeam": "乌兹别克斯坦",
+      "homeScore": 5,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/POR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/UZB",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021501",
+      "date": "2026-06-24",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43926",
+      "homeTeam": "哥伦比亚",
+      "awayTeamId": "20014",
+      "awayTeam": "刚果民主共和国",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COD",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021455",
+      "date": "2026-06-24",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43967",
+      "homeTeam": "苏格兰",
+      "awayTeamId": "43924",
+      "awayTeam": "巴西",
+      "homeScore": 0,
+      "awayScore": 3,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SCO",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BRA",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021452",
+      "date": "2026-06-24",
+      "time": "22:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43872",
+      "homeTeam": "摩洛哥",
+      "awayTeamId": "43908",
+      "awayTeam": "海地",
+      "homeScore": 4,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MAR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/HAI",
+      "group": "C组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021451",
+      "date": "2026-06-24",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43971",
+      "homeTeam": "瑞士",
+      "awayTeamId": "43899",
+      "awayTeam": "加拿大",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SUI",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CAN",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021448",
+      "date": "2026-06-24",
+      "time": "19:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "44037",
+      "homeTeam": "波斯尼亚和黑塞哥维那",
+      "awayTeamId": "43834",
+      "awayTeam": "卡塔尔",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BIH",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/QAT",
+      "group": "B组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021444",
+      "date": "2026-06-25",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43995",
+      "homeTeam": "捷克",
+      "awayTeamId": "43911",
+      "awayTeam": "墨西哥",
+      "homeScore": 0,
+      "awayScore": 3,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CZE",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MEX",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021445",
+      "date": "2026-06-25",
+      "time": "01:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43883",
+      "homeTeam": "南非",
+      "awayTeamId": "43822",
+      "awayTeam": "韩国",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/RSA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KOR",
+      "group": "A组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021468",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "1895293",
+      "homeTeam": "库拉索",
+      "awayTeamId": "43854",
+      "awayTeam": "科特迪瓦",
+      "homeScore": 0,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CUW",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CIV",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021466",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43927",
+      "homeTeam": "厄瓜多尔",
+      "awayTeamId": "43948",
+      "awayTeam": "德国",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ECU",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GER",
+      "group": "E组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021471",
+      "date": "2026-06-25",
+      "time": "23:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43819",
+      "homeTeam": "日本",
+      "awayTeamId": "43970",
+      "awayTeam": "瑞典",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JPN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SWE",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021473",
+      "date": "2026-06-25",
+      "time": "23:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43888",
+      "homeTeam": "突尼斯",
+      "awayTeamId": "43960",
+      "awayTeam": "荷兰",
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NED",
+      "group": "F组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021459",
+      "date": "2026-06-26",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43972",
+      "homeTeam": "土耳其",
+      "awayTeamId": "43921",
+      "awayTeam": "美国",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/TUR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/USA",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021461",
+      "date": "2026-06-26",
+      "time": "02:00",
+      "status": "Completed",
+      "minute": null,
+      "homeTeamId": "43928",
+      "homeTeam": "巴拉圭",
+      "awayTeamId": "43976",
+      "awayTeam": "澳大利亚",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUS",
+      "group": "D组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021489",
+      "date": "2026-06-26",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43961",
+      "homeTeam": "挪威",
+      "awayTeamId": "43946",
+      "awayTeam": "法国",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NOR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/FRA",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021493",
+      "date": "2026-06-26",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43879",
+      "homeTeam": "塞内加尔",
+      "awayTeamId": "43818",
+      "awayTeam": "伊拉克",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SEN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRQ",
+      "group": "I组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021479",
+      "date": "2026-06-27",
+      "time": "03:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43855",
+      "homeTeam": "埃及",
+      "awayTeamId": "43817",
+      "awayTeam": "伊朗",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/EGY",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/IRN",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021481",
+      "date": "2026-06-27",
+      "time": "03:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43978",
+      "homeTeam": "新西兰",
+      "awayTeamId": "43935",
+      "awayTeam": "比利时",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NZL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BEL",
+      "group": "G组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021485",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43850",
+      "homeTeam": "佛得角",
+      "awayTeamId": "43835",
+      "awayTeam": "沙特阿拉伯",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CPV",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/KSA",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021484",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43930",
+      "homeTeam": "乌拉圭",
+      "awayTeamId": "43969",
+      "awayTeam": "西班牙",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/URU",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ESP",
+      "group": "H组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021508",
+      "date": "2026-06-27",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43914",
+      "homeTeam": "巴拿马",
+      "awayTeamId": "43942",
+      "awayTeam": "英格兰",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/PAN",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ENG",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021509",
+      "date": "2026-06-27",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43938",
+      "homeTeam": "克罗地亚",
+      "awayTeamId": "43860",
+      "awayTeam": "加纳",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CRO",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GHA",
+      "group": "L组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021497",
+      "date": "2026-06-28",
+      "time": "02:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43843",
+      "homeTeam": "阿尔及利亚",
+      "awayTeamId": "43934",
+      "awayTeam": "奥地利",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ALG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/AUT",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021495",
+      "date": "2026-06-28",
+      "time": "02:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43820",
+      "homeTeam": "约旦",
+      "awayTeamId": "43922",
+      "awayTeam": "阿根廷",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JOR",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ARG",
+      "group": "J组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021505",
+      "date": "2026-06-27",
+      "time": "23:30",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43926",
+      "homeTeam": "哥伦比亚",
+      "awayTeamId": "43963",
+      "awayTeam": "葡萄牙",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COL",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/POR",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021500",
+      "date": "2026-06-27",
+      "time": "23:30",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "20014",
+      "homeTeam": "刚果民主共和国",
+      "awayTeamId": "44005",
+      "awayTeam": "乌兹别克斯坦",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/COD",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/UZB",
+      "group": "K组",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021518",
+      "date": "2026-06-28",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43883",
+      "homeTeam": "南非",
+      "awayTeamId": "43899",
+      "awayTeam": "加拿大",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/RSA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CAN",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021513",
+      "date": "2026-06-29",
+      "time": "20:30",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43948",
+      "homeTeam": "德国",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/GER",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021522",
+      "date": "2026-06-30",
+      "time": "01:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43960",
+      "homeTeam": "荷兰",
+      "awayTeamId": "43872",
+      "awayTeam": "摩洛哥",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/NED",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MAR",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021516",
+      "date": "2026-06-29",
+      "time": "17:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43924",
+      "homeTeam": "巴西",
+      "awayTeamId": "43819",
+      "awayTeam": "日本",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BRA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/JPN",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021523",
+      "date": "2026-06-30",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021514",
+      "date": "2026-06-30",
+      "time": "17:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43854",
+      "homeTeam": "科特迪瓦",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/CIV",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021520",
+      "date": "2026-07-01",
+      "time": "01:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43911",
+      "homeTeam": "墨西哥",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/MEX",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021512",
+      "date": "2026-07-01",
+      "time": "16:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021524",
+      "date": "2026-07-02",
+      "time": "00:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43921",
+      "homeTeam": "美国",
+      "awayTeamId": "44037",
+      "awayTeam": "波斯尼亚和黑塞哥维那",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/USA",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/BIH",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021525",
+      "date": "2026-07-01",
+      "time": "20:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021526",
+      "date": "2026-07-02",
+      "time": "23:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021519",
+      "date": "2026-07-02",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021527",
+      "date": "2026-07-03",
+      "time": "03:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43971",
+      "homeTeam": "瑞士",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/SUI",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021521",
+      "date": "2026-07-03",
+      "time": "22:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "43922",
+      "homeTeam": "阿根廷",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/ARG",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021517",
+      "date": "2026-07-04",
+      "time": "01:30",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021515",
+      "date": "2026-07-03",
+      "time": "18:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021533",
+      "date": "2026-07-04",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021530",
+      "date": "2026-07-04",
+      "time": "17:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021532",
+      "date": "2026-07-05",
+      "time": "20:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021531",
+      "date": "2026-07-06",
+      "time": "00:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021529",
+      "date": "2026-07-06",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021534",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021528",
+      "date": "2026-07-07",
+      "time": "16:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021535",
+      "date": "2026-07-07",
+      "time": "20:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021536",
+      "date": "2026-07-09",
+      "time": "20:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021538",
+      "date": "2026-07-10",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021539",
+      "date": "2026-07-11",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021537",
+      "date": "2026-07-12",
+      "time": "01:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021541",
+      "date": "2026-07-14",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021540",
+      "date": "2026-07-15",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021542",
+      "date": "2026-07-18",
+      "time": "21:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": "match-400021543",
+      "date": "2026-07-19",
+      "time": "19:00",
+      "status": "Scheduled",
+      "minute": null,
+      "homeTeamId": "",
+      "homeTeam": "",
+      "awayTeamId": "",
+      "awayTeam": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "awayFlag": "https://api.fifa.com/api/v3/picture/flags-sq-3/",
+      "group": "淘汰赛",
+      "venue": "",
+      "events": [],
+      "stats": {
+        "possession": {
+          "home": 50,
+          "away": 50
+        },
+        "shots": {
+          "home": 0,
+          "away": 0
+        },
+        "shotsOnTarget": {
+          "home": 0,
+          "away": 0
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 0,
+          "away": 0
+        }
+      }
     }
   ],
   "scorers": [
-    { "id": "p1", "name": "埃尔林·哈兰德", "teamId": "NOR", "teamName": "挪威", "flag": "🇳🇴", "goals": 5, "assists": 0, "penalties": 0, "matchesPlayed": 3 },
-    { "id": "p4", "name": "莱昂内尔·梅西", "teamId": "ARG", "teamName": "阿根廷", "flag": "🇦🇷", "goals": 5, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
-    { "id": "p2", "name": "基利安·姆巴佩", "teamId": "FRA", "teamName": "法国", "flag": "🇫🇷", "goals": 4, "assists": 1, "penalties": 0, "matchesPlayed": 3 },
-    { "id": "p3", "name": "克里斯蒂安·普利西奇", "teamId": "USA", "teamName": "美国", "flag": "🇺🇸", "goals": 3, "assists": 2, "penalties": 1, "matchesPlayed": 3 },
-    { "id": "p5", "name": "达尔文·努涅斯", "teamId": "URU", "teamName": "乌拉圭", "flag": "🇺🇾", "goals": 3, "assists": 1, "penalties": 0, "matchesPlayed": 3 }
+    {
+      "id": "p1",
+      "name": "埃尔林·哈兰德",
+      "teamId": "NOR",
+      "teamName": "挪威",
+      "flag": "🇳🇴",
+      "goals": 5,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p4",
+      "name": "莱昂内尔·梅西",
+      "teamId": "ARG",
+      "teamName": "阿根廷",
+      "flag": "🇦🇷",
+      "goals": 5,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p2",
+      "name": "基利安·姆巴佩",
+      "teamId": "FRA",
+      "teamName": "法国",
+      "flag": "🇫🇷",
+      "goals": 4,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p3",
+      "name": "克里斯蒂安·普利西奇",
+      "teamId": "USA",
+      "teamName": "美国",
+      "flag": "🇺🇸",
+      "goals": 3,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p5",
+      "name": "达尔文·努涅斯",
+      "teamId": "URU",
+      "teamName": "乌拉圭",
+      "flag": "🇺🇾",
+      "goals": 3,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    }
   ],
   "news": [
     {
