@@ -4,6 +4,44 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// Match interface (matches src/types.ts)
+interface MatchEvent {
+  id: string;
+  minute: number;
+  type: 'goal' | 'yellow_card' | 'red_card' | 'substitution' | 'injury';
+  teamId: string;
+  playerName: string;
+  detail?: string;
+}
+
+interface MatchStats {
+  possession: [number, number];
+  shots: [number, number];
+  shotsOnTarget: [number, number];
+  fouls: [number, number];
+  corners: [number, number];
+  yellowCards: [number, number];
+  redCards: [number, number];
+}
+
+interface Match {
+  id: string;
+  stage: 'Group' | 'Round of 32' | 'Round of 16' | 'Quarterfinal' | 'Semifinal' | 'Third Place' | 'Final';
+  group?: string;
+  homeTeamId: string;
+  awayTeamId: string;
+  homeScore: number;
+  awayScore: number;
+  status: 'Scheduled' | 'Live' | 'Completed';
+  minute?: number;
+  date: string;
+  time: string;
+  stadium: string;
+  city: string;
+  events: MatchEvent[];
+  stats: MatchStats;
+}
+
 const DATA_PATH = path.join(process.cwd(), "public", "api", "worldcup.json");
 
 // ============================================
