@@ -20,7 +20,8 @@ const getPaths = () => {
 };
 
 // GET endpoint to retrieve the world cup data
-app.get("/api/worldcup.json", (req, res) => {
+// Automatically refreshes from GitHub if cache is stale
+app.get("/api/worldcup.json", async (req, res) => {
   const { devPath, prodPath } = getPaths();
   let dataPath = devPath;
 
@@ -31,14 +32,56 @@ app.get("/api/worldcup.json", (req, res) => {
     dataPath = prodPath;
   }
 
+  // Check if local data is stale (older than 5 minutes) - refresh from GitHub
+  let needsRefresh = true;
+  try {
+    if (fs.existsSync(dataPath)) {
+      const stats = fs.statSync(dataPath);
+      const ageMs = Date.now() - stats.mtimeMs;
+      needsRefresh = ageMs > CACHE_TTL_MS;
+    }
+  } catch (e) {
+    needsRefresh = true;
+  }
+
+  if (needsRefresh) {
+    console.log("🔄 本地数据已过期，正在从 GitHub 刷新...");
+    const ghResult = await fetch26WorldCupData();
+    if (ghResult.success && ghResult.data) {
+      const ghData = ghResult.data as any;
+      if (ghData.matches && ghData.matches.length > 0) {
+        // Read existing data to preserve scorers/news
+        let existingData = { matches: [], scorers: [], news: [] };
+        try {
+          if (fs.existsSync(dataPath)) {
+            existingData = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+          }
+        } catch (e) { /* ignore */ }
+
+        const convertedMatches = ghData.matches.map((m: any) => convert26WcMatch(m, ghData.teams || {}));
+        const mergedData = { ...existingData, matches: convertedMatches };
+
+        try {
+          const dir = path.dirname(dataPath);
+          if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+          fs.writeFileSync(dataPath, JSON.stringify(mergedData, null, 2), "utf-8");
+          console.log(`✅ 已从 GitHub 更新 ${convertedMatches.length} 场比赛数据`);
+        } catch (writeErr) {
+          console.error("写入数据失败:", writeErr);
+        }
+
+        return res.json(mergedData);
+      }
+    }
+    console.warn("⚠️ 从 GitHub 刷新失败，返回本地缓存数据");
+  }
+
   try {
     if (fs.existsSync(dataPath)) {
       const content = fs.readFileSync(dataPath, "utf-8");
       return res.json(JSON.parse(content));
     } else {
-      // Fallback if file is missing - fetch from GitHub
-      console.log("⚠️ Local data file missing, fetching from GitHub...");
-      return fetchAndReturnGithubData(res);
+      return res.status(404).json({ error: "WorldCup data file not found" });
     }
   } catch (err: any) {
     console.error("Error reading worldcup.json:", err);
@@ -101,9 +144,9 @@ const fetch26WorldCupData = async (): Promise<ApiHealthResult> => {
   }
 };
 
-// Convert 26worldcup match format to internal Match format
+// Convert 26worldcup match format to internal Match format (matches types.ts exactly)
 const convert26WcMatch = (match: any, teamsMap: Record<string, any>) => {
-  const statusMap: Record<string, string> = {
+  const statusMap: Record<string, 'Scheduled' | 'Live' | 'Completed'> = {
     "finished": "Completed",
     "live": "Live",
     "upcoming": "Scheduled",
@@ -111,47 +154,59 @@ const convert26WcMatch = (match: any, teamsMap: Record<string, any>) => {
     "suspended": "Live",
   };
 
+  const stageMap: Record<string, Match['stage']> = {
+    "group": "Group",
+    "r32": "Round of 32",
+    "r16": "Round of 16",
+    "qf": "Quarterfinal",
+    "sf": "Semifinal",
+    "third": "Third Place",
+    "final": "Final",
+  };
+
   const homeCode = match.home?.code || "";
   const awayCode = match.away?.code || "";
   const homeTeam = teamsMap[homeCode] || {};
   const awayTeam = teamsMap[awayCode] || {};
 
-  // Parse date/time
+  // Parse date/time - convert UTC to local date string
   const dateObj = new Date(match.date || "");
   const dateStr = dateObj.toISOString().split("T")[0];
   const timeStr = dateObj.toISOString().split("T")[1]?.slice(0, 5) || "12:00";
 
   // Parse minute from "time" field like "67'" or "HT" or "FT"
-  let minute: number | null = null;
+  let minute: number | undefined = undefined;
   const timeStrRaw = match.time || "";
   const minMatch = timeStrRaw.match(/(\d+)/);
-  if (minMatch) {
+  if (minMatch && match.status === "live") {
     minute = parseInt(minMatch[1], 10);
   }
 
+  const stage: Match['stage'] = stageMap[match.stage] || "Group";
+
   return {
     id: `match-${match.id || match.n || Math.random()}`,
-    date: dateStr,
-    time: timeStr,
-    status: statusMap[match.status] || "Scheduled",
-    minute: match.status === "live" ? (minute || 0) : null,
-    homeTeamId: homeTeam.fifaId || homeCode,
-    homeTeam: homeTeam.name?.zh || homeTeam.name?.en || homeCode,
-    awayTeamId: awayTeam.fifaId || awayCode,
-    awayTeam: awayTeam.name?.zh || awayTeam.name?.en || awayCode,
+    stage: stage,
+    group: match.group || undefined,
+    homeTeamId: homeCode,
+    awayTeamId: awayCode,
     homeScore: match.home?.score ?? 0,
     awayScore: match.away?.score ?? 0,
-    homeFlag: homeTeam.flag || `https://api.fifa.com/api/v3/picture/flags-sq-3/${homeCode}`,
-    awayFlag: awayTeam.flag || `https://api.fifa.com/api/v3/picture/flags-sq-3/${awayCode}`,
-    group: match.group ? `${match.group}组` : (match.stage === "group" ? "小组赛" : "淘汰赛"),
-    venue: "",
+    status: statusMap[match.status] || "Scheduled",
+    minute: minute,
+    date: dateStr,
+    time: timeStr,
+    stadium: "",
+    city: "",
     events: [],
     stats: {
-      possession: { home: 50, away: 50 },
-      shots: { home: 0, away: 0 },
-      shotsOnTarget: { home: 0, away: 0 },
-      corners: { home: 0, away: 0 },
-      fouls: { home: 0, away: 0 }
+      possession: [50, 50] as [number, number],
+      shots: [10, 10] as [number, number],
+      shotsOnTarget: [4, 4] as [number, number],
+      fouls: [12, 12] as [number, number],
+      corners: [5, 5] as [number, number],
+      yellowCards: [1, 1] as [number, number],
+      redCards: [0, 0] as [number, number],
     }
   };
 };

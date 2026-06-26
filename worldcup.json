@@ -1,0 +1,4729 @@
+{
+  "matches": [
+    {
+      "id": "match-400021443",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "MEX",
+      "awayTeamId": "RSA",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021441",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "KOR",
+      "awayTeamId": "CZE",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-12",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021449",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "CAN",
+      "awayTeamId": "BIH",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-12",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021458",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "USA",
+      "awayTeamId": "PAR",
+      "homeScore": 4,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-13",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021453",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "HAI",
+      "awayTeamId": "SCO",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021463",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "AUS",
+      "awayTeamId": "TUR",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "04:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021456",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "BRA",
+      "awayTeamId": "MAR",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-13",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021447",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "QAT",
+      "awayTeamId": "SUI",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-13",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021467",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "CIV",
+      "awayTeamId": "ECU",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021464",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "GER",
+      "awayTeamId": "CUW",
+      "homeScore": 7,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021470",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "NED",
+      "awayTeamId": "JPN",
+      "homeScore": 2,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-14",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021474",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "SWE",
+      "awayTeamId": "TUN",
+      "homeScore": 5,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-15",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021486",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "KSA",
+      "awayTeamId": "URU",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-15",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021482",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "ESP",
+      "awayTeamId": "CPV",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-15",
+      "time": "16:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021476",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "IRN",
+      "awayTeamId": "NZL",
+      "homeScore": 2,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-16",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021478",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "BEL",
+      "awayTeamId": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-15",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021490",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "FRA",
+      "awayTeamId": "SEN",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-16",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021488",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "IRQ",
+      "awayTeamId": "NOR",
+      "homeScore": 1,
+      "awayScore": 4,
+      "status": "Completed",
+      "date": "2026-06-16",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021496",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "ARG",
+      "awayTeamId": "ALG",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021498",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "AUT",
+      "awayTeamId": "JOR",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "04:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021510",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "GHA",
+      "awayTeamId": "PAN",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021507",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "ENG",
+      "awayTeamId": "CRO",
+      "homeScore": 4,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021502",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "POR",
+      "awayTeamId": "COD",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-17",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021504",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "UZB",
+      "awayTeamId": "COL",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-18",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021440",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "CZE",
+      "awayTeamId": "RSA",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-18",
+      "time": "16:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021446",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "SUI",
+      "awayTeamId": "BIH",
+      "homeScore": 4,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-18",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021450",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "CAN",
+      "awayTeamId": "QAT",
+      "homeScore": 6,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-18",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021442",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "MEX",
+      "awayTeamId": "KOR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-19",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021457",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "BRA",
+      "awayTeamId": "HAI",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-20",
+      "time": "00:30",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021454",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "SCO",
+      "awayTeamId": "MAR",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-19",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021460",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "TUR",
+      "awayTeamId": "PAR",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-20",
+      "time": "03:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021462",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "USA",
+      "awayTeamId": "AUS",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-19",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021469",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "GER",
+      "awayTeamId": "CIV",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-20",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021465",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "ECU",
+      "awayTeamId": "CUW",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-21",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021472",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "NED",
+      "awayTeamId": "SWE",
+      "homeScore": 5,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-20",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021475",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "TUN",
+      "awayTeamId": "JPN",
+      "homeScore": 0,
+      "awayScore": 4,
+      "status": "Completed",
+      "date": "2026-06-21",
+      "time": "04:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021487",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "URU",
+      "awayTeamId": "CPV",
+      "homeScore": 2,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-21",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021483",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "ESP",
+      "awayTeamId": "KSA",
+      "homeScore": 4,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-21",
+      "time": "16:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021477",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "BEL",
+      "awayTeamId": "IRN",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-21",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021480",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "NZL",
+      "awayTeamId": "EGY",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-22",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021491",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "NOR",
+      "awayTeamId": "SEN",
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-23",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021492",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "FRA",
+      "awayTeamId": "IRQ",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-22",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021494",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "ARG",
+      "awayTeamId": "AUT",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-22",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021499",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "JOR",
+      "awayTeamId": "ALG",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-23",
+      "time": "03:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021506",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "ENG",
+      "awayTeamId": "GHA",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-23",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021511",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "PAN",
+      "awayTeamId": "CRO",
+      "homeScore": 0,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-23",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021503",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "POR",
+      "awayTeamId": "UZB",
+      "homeScore": 5,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-23",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021501",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "COL",
+      "awayTeamId": "COD",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-24",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021455",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "SCO",
+      "awayTeamId": "BRA",
+      "homeScore": 0,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-24",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021452",
+      "stage": "Group",
+      "group": "C",
+      "homeTeamId": "MAR",
+      "awayTeamId": "HAI",
+      "homeScore": 4,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-24",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021451",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "SUI",
+      "awayTeamId": "CAN",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-24",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021448",
+      "stage": "Group",
+      "group": "B",
+      "homeTeamId": "BIH",
+      "awayTeamId": "QAT",
+      "homeScore": 3,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-24",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021444",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "CZE",
+      "awayTeamId": "MEX",
+      "homeScore": 0,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021445",
+      "stage": "Group",
+      "group": "A",
+      "homeTeamId": "RSA",
+      "awayTeamId": "KOR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021468",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "CUW",
+      "awayTeamId": "CIV",
+      "homeScore": 0,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021466",
+      "stage": "Group",
+      "group": "E",
+      "homeTeamId": "ECU",
+      "awayTeamId": "GER",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021471",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "JPN",
+      "awayTeamId": "SWE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021473",
+      "stage": "Group",
+      "group": "F",
+      "homeTeamId": "TUN",
+      "awayTeamId": "NED",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "Completed",
+      "date": "2026-06-25",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021459",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "TUR",
+      "awayTeamId": "USA",
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "Completed",
+      "date": "2026-06-26",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021461",
+      "stage": "Group",
+      "group": "D",
+      "homeTeamId": "PAR",
+      "awayTeamId": "AUS",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Completed",
+      "date": "2026-06-26",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021489",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "NOR",
+      "awayTeamId": "FRA",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-26",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021493",
+      "stage": "Group",
+      "group": "I",
+      "homeTeamId": "SEN",
+      "awayTeamId": "IRQ",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-26",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021479",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "EGY",
+      "awayTeamId": "IRN",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "03:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021481",
+      "stage": "Group",
+      "group": "G",
+      "homeTeamId": "NZL",
+      "awayTeamId": "BEL",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "03:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021485",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "CPV",
+      "awayTeamId": "KSA",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021484",
+      "stage": "Group",
+      "group": "H",
+      "homeTeamId": "URU",
+      "awayTeamId": "ESP",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021508",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "PAN",
+      "awayTeamId": "ENG",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021509",
+      "stage": "Group",
+      "group": "L",
+      "homeTeamId": "CRO",
+      "awayTeamId": "GHA",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021497",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "ALG",
+      "awayTeamId": "AUT",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-28",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021495",
+      "stage": "Group",
+      "group": "J",
+      "homeTeamId": "JOR",
+      "awayTeamId": "ARG",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-28",
+      "time": "02:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021505",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "COL",
+      "awayTeamId": "POR",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "23:30",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021500",
+      "stage": "Group",
+      "group": "K",
+      "homeTeamId": "COD",
+      "awayTeamId": "UZB",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-27",
+      "time": "23:30",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021518",
+      "stage": "Round of 32",
+      "homeTeamId": "RSA",
+      "awayTeamId": "CAN",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-28",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021513",
+      "stage": "Round of 32",
+      "homeTeamId": "GER",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-29",
+      "time": "20:30",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021522",
+      "stage": "Round of 32",
+      "homeTeamId": "NED",
+      "awayTeamId": "MAR",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-30",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021516",
+      "stage": "Round of 32",
+      "homeTeamId": "BRA",
+      "awayTeamId": "JPN",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-29",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021523",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-30",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021514",
+      "stage": "Round of 32",
+      "homeTeamId": "CIV",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-06-30",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021520",
+      "stage": "Round of 32",
+      "homeTeamId": "MEX",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-01",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021512",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-01",
+      "time": "16:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021524",
+      "stage": "Round of 32",
+      "homeTeamId": "USA",
+      "awayTeamId": "BIH",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-02",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021525",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-01",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021526",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-02",
+      "time": "23:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021519",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-02",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021527",
+      "stage": "Round of 32",
+      "homeTeamId": "SUI",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-03",
+      "time": "03:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021521",
+      "stage": "Round of 32",
+      "homeTeamId": "ARG",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-03",
+      "time": "22:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021517",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-04",
+      "time": "01:30",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021515",
+      "stage": "Round of 32",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-03",
+      "time": "18:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021533",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-04",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021530",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-04",
+      "time": "17:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021532",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-05",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021531",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-06",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021529",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-06",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021534",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021528",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-07",
+      "time": "16:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021535",
+      "stage": "Round of 16",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-07",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021536",
+      "stage": "Quarterfinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-09",
+      "time": "20:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021538",
+      "stage": "Quarterfinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-10",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021539",
+      "stage": "Quarterfinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-11",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021537",
+      "stage": "Quarterfinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-12",
+      "time": "01:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021541",
+      "stage": "Semifinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-14",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021540",
+      "stage": "Semifinal",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-15",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021542",
+      "stage": "Third Place",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-18",
+      "time": "21:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "match-400021543",
+      "stage": "Final",
+      "homeTeamId": "",
+      "awayTeamId": "",
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "Scheduled",
+      "date": "2026-07-19",
+      "time": "19:00",
+      "stadium": "",
+      "city": "",
+      "events": [],
+      "stats": {
+        "possession": [
+          50,
+          50
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          12
+        ],
+        "corners": [
+          5,
+          5
+        ],
+        "yellowCards": [
+          1,
+          1
+        ],
+        "redCards": [
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "scorers": [
+    {
+      "id": "p1",
+      "name": "埃尔林·哈兰德",
+      "teamId": "NOR",
+      "teamName": "挪威",
+      "flag": "🇳🇴",
+      "goals": 5,
+      "assists": 0,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p4",
+      "name": "莱昂内尔·梅西",
+      "teamId": "ARG",
+      "teamName": "阿根廷",
+      "flag": "🇦🇷",
+      "goals": 5,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p2",
+      "name": "基利安·姆巴佩",
+      "teamId": "FRA",
+      "teamName": "法国",
+      "flag": "🇫🇷",
+      "goals": 4,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p3",
+      "name": "克里斯蒂安·普利西奇",
+      "teamId": "USA",
+      "teamName": "美国",
+      "flag": "🇺🇸",
+      "goals": 3,
+      "assists": 2,
+      "penalties": 1,
+      "matchesPlayed": 3
+    },
+    {
+      "id": "p5",
+      "name": "达尔文·努涅斯",
+      "teamId": "URU",
+      "teamName": "乌拉圭",
+      "flag": "🇺🇾",
+      "goals": 3,
+      "assists": 1,
+      "penalties": 0,
+      "matchesPlayed": 3
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1",
+      "title": "魔人降临！哈兰德梅开二度，挪威大胜率先晋级32强！",
+      "summary": "2026美加墨世界杯小组赛L组末轮，挪威凭借哈兰德的出色发挥锁定胜局，昂首挺进淘汰赛。",
+      "content": "在刚刚结束的世界杯小组赛L组末轮比赛中，挪威队以高效的进攻彻底压制了对手。锋线尖刀哈兰德再次展现恐怖的门前嗅觉，在上半场第14分钟和第44分钟各入一球，目前他以5粒进球强势领领先！",
+      "time": "5分钟前",
+      "source": "国际足联中文官网",
+      "tag": "战报"
+    },
+    {
+      "id": "news-2",
+      "title": "美加墨世界杯：东道主墨西哥战胜厄瓜多尔，出线形势大好！",
+      "summary": "希门尼斯与查维斯各建一功，墨西哥队两胜一平积7分稳坐小组第一。",
+      "content": "在阿克伦体育场，全场接近五万名球迷的欢呼声里，墨西哥队奉献了极具侵略性的整场压迫，最终战胜了老对手厄瓜多尔。",
+      "time": "15分钟前",
+      "source": "路透体育",
+      "tag": "爆料"
+    }
+  ]
+}
