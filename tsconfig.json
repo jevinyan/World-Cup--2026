@@ -22,5 +22,12 @@
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "exclude": [
+    "test_*.py",
+    "test_*.mjs",
+    "test_*.js",
+    "*.py",
+    "dist"
+  ]
 }
