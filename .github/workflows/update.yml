@@ -2,21 +2,20 @@ name: Automatic 2026 World Cup Data Scraper
 
 on:
   schedule:
-    # Runs every 5 minutes (the minimum supported by GitHub Actions)
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *' # 改为 15 分钟一次，避免被 GitHub 判定为频繁触发
   workflow_dispatch:
-    # Allows manual trigger from the GitHub Actions tab
 
 permissions:
-  contents: write # Required to push commits back to the repository
+  contents: write
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # 确保拥有写权限
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -27,19 +26,18 @@ jobs:
         run: npm install
 
       - name: Run Scraper Script
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run cron-update
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/api/worldcup.json
           
+          # 检查是否有变动
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes detected, skipping commit."
           else
-            git commit -m "chore: auto-update 2026 World Cup live data [skip ci]"
+            git commit -m "chore: update world cup live data"
             git push origin main
           fi
