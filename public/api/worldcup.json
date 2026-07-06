@@ -4127,8 +4127,7 @@
       "awayTeamId": "ESP",
       "homeScore": 0,
       "awayScore": 1,
-      "status": "Live",
-      "minute": 90,
+      "status": "Completed",
       "date": "2026-07-06",
       "time": "19:00",
       "stadium": "",
@@ -4344,7 +4343,7 @@
     {
       "id": "match-400021538",
       "stage": "Quarterfinal",
-      "homeTeamId": "",
+      "homeTeamId": "ESP",
       "awayTeamId": "",
       "homeScore": 0,
       "awayScore": 0,
