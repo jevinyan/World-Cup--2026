@@ -4259,7 +4259,8 @@
       "awayTeamId": "COL",
       "homeScore": 0,
       "awayScore": 0,
-      "status": "Scheduled",
+      "status": "Live",
+      "minute": 18,
       "date": "2026-07-07",
       "time": "20:00",
       "stadium": "",
@@ -4431,7 +4432,7 @@
     {
       "id": "match-400021537",
       "stage": "Quarterfinal",
-      "homeTeamId": "",
+      "homeTeamId": "ARG",
       "awayTeamId": "",
       "homeScore": 0,
       "awayScore": 0,
