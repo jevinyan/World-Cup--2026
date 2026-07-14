@@ -4478,8 +4478,8 @@
       "homeTeamId": "FRA",
       "awayTeamId": "ESP",
       "homeScore": 0,
-      "awayScore": 1,
-      "status": "Live",
+      "awayScore": 2,
+      "status": "Completed",
       "date": "2026-07-14",
       "time": "19:00",
       "stadium": "",
@@ -4563,7 +4563,7 @@
     {
       "id": "match-400021542",
       "stage": "Third Place",
-      "homeTeamId": "",
+      "homeTeamId": "FRA",
       "awayTeamId": "",
       "homeScore": 0,
       "awayScore": 0,
@@ -4607,7 +4607,7 @@
     {
       "id": "match-400021543",
       "stage": "Final",
-      "homeTeamId": "",
+      "homeTeamId": "ESP",
       "awayTeamId": "",
       "homeScore": 0,
       "awayScore": 0,
